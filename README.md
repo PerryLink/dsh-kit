@@ -1,5 +1,7 @@
 # dsh-kit
 
+[![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-kit/ci.yml?branch=main)](https://github.com/PerryLink/dsh-kit/actions)
+
 **One-command starter pack: install all 15 PerryLink DeepSeek Harness plugins.**
 
 [dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus twelve more plugins that cover memory, MCP observability, background agents, engineering discipline, security and migration. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
