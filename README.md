@@ -3,9 +3,9 @@
 
 [![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-kit/ci.yml?branch=main)](https://github.com/PerryLink/dsh-kit/actions)
 
-**One-command starter pack: install all 15 PerryLink DeepSeek Harness plugins.**
+**One-command starter pack: install all 37 PerryLink DeepSeek Harness plugins.**
 
-[dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus twelve more plugins that cover memory, MCP observability, background agents, engineering discipline, security and migration. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
+[dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus thirty-four more plugins across security, workflows, research, messaging bridges, and developer experience. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
 
 ## Quick start
 
@@ -27,7 +27,7 @@ dsh plugin --profile web add dsh-permission-rules    # allow/deny/ask rules
 dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 ```
 
-## What's inside
+## What's inside (curated highlights — the installers cover the full 37-plugin family)
 
 ### The Claude Code parity trio
 
@@ -67,7 +67,7 @@ dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 ## Notes
 
 - Install scripts are **idempotent** — safe to re-run.
-- `dsh-plugin-guide` and `dsh-claude-move` install from GitHub (they are not published to npm); everything else installs from npm.
+- `dsh-skill-pack-security` installs from its published provider package (`@perrylink/dsh-skill-pack-security-provider`); everything else installs from npm.
 - Versions track the latest npm releases; pin a specific version per plugin if you need reproducibility.
 - License: Apache-2.0 (matching the plugin family).
 
