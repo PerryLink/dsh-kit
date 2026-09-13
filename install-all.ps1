@@ -28,7 +28,6 @@ $plugins = @(
   'dsh-observe',
   'dsh-output-styles',
   'dsh-permission-rules',
-  'dsh-personal-directive',
   'dsh-plugin-guide',
   'dsh-reach',
   'dsh-research-report',
