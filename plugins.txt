@@ -1,0 +1,54 @@
+# PerryLink DSH plugin roster — the single source of truth for install-all.sh,
+# install-all.ps1 and scripts/check-parity.mjs (which also holds README.md's
+# numbers and its family table to this file).
+#
+# One npm spec per line; blank lines and lines starting with # are ignored.
+# A package belongs here when it is installable from npm (`dsh.bundle.patch`
+# declared and the patch file committed), published, and not deprecated.
+# Deprecated names stay on the registry for users who already installed them,
+# but they do not belong in a fresh install:
+#   dsh-plugin-upgrade-015  superseded by dsh-plugin-upgrade
+#   dsh-plugin-upgrade-rc1  renamed to dsh-plugin-upgrade-015, then superseded
+# Third-party packages do not belong here at all, however friendly the
+# collaboration (dsh-wechat was listed until 2026-09-20; it is pan17's package).
+dsh-auto-review
+dsh-autotier
+dsh-background-agents
+dsh-budget
+dsh-cert-mcp
+dsh-checkpoint-rewind
+dsh-claude-move
+dsh-click
+dsh-composer-history
+dsh-data-quality
+dsh-defend
+dsh-doublecheck
+dsh-draw
+dsh-fast
+dsh-fund-research
+dsh-industry-research
+dsh-library
+dsh-local-ai
+dsh-lsp-actions
+dsh-mask
+dsh-mcp-panel
+dsh-memento
+dsh-observe
+dsh-output-styles
+dsh-permission-rules
+dsh-plugin-guide
+dsh-plugin-upgrade
+dsh-reach
+dsh-research-report
+dsh-score
+dsh-session-pin
+dsh-session-sync
+dsh-talk
+dsh-team-rooms
+dsh-test-drive
+dsh-translate
+@perrylink/dsh-github
+@perrylink/dsh-plugin-doctor
+@perrylink/dsh-plugin-kit
+@perrylink/dsh-skill-pack-security-provider
+@perrylink/dsh-ticktick

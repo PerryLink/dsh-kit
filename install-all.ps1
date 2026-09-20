@@ -1,47 +1,22 @@
-# install-all.ps1 — install the 37 PerryLink DSH plugins into one profile.
+# install-all.ps1 — install every PerryLink DSH plugin listed in plugins.txt.
 # Usage: .\install-all.ps1 [-Profile web]
+#
+# The roster is plugins.txt next to this script. Do not inline a package list
+# here: scripts/check-parity.mjs fails when either installer hard-codes one, and
+# holds README.md's counts to the same file.
 param(
   [string]$Profile = "web"
 )
 
-$plugins = @(
-  'dsh-auto-review',
-  'dsh-background-agents',
-  'dsh-budget',
-  'dsh-checkpoint-rewind',
-  'dsh-claude-move',
-  'dsh-click',
-  'dsh-composer-history',
-  'dsh-data-quality',
-  'dsh-defend',
-  'dsh-doublecheck',
-  'dsh-draw',
-  'dsh-fast',
-  'dsh-fund-research',
-  'dsh-industry-research',
-  'dsh-library',
-  'dsh-local-ai',
-  'dsh-lsp-actions',
-  'dsh-mask',
-  'dsh-mcp-panel',
-  'dsh-memento',
-  'dsh-observe',
-  'dsh-output-styles',
-  'dsh-permission-rules',
-  'dsh-plugin-guide',
-  'dsh-reach',
-  'dsh-research-report',
-  'dsh-score',
-  'dsh-session-pin',
-  'dsh-session-sync',
-  'dsh-talk',
-  'dsh-test-drive',
-  'dsh-translate',
-  'dsh-wechat',
-  '@perrylink/dsh-github',
-  '@perrylink/dsh-skill-pack-security-provider',
-  '@perrylink/dsh-ticktick'
-)
+$rosterPath = Join-Path $PSScriptRoot 'plugins.txt'
+if (-not (Test-Path $rosterPath)) {
+  Write-Error "plugins.txt not found next to this script: $rosterPath"
+  exit 1
+}
+
+$plugins = Get-Content -LiteralPath $rosterPath |
+  ForEach-Object { $_.Trim() } |
+  Where-Object { $_ -and -not $_.StartsWith('#') }
 
 $failed = @()
 foreach ($p in $plugins) {
@@ -51,7 +26,7 @@ foreach ($p in $plugins) {
 }
 
 if ($failed.Count -eq 0) {
-  Write-Host "All 37 plugins installed into profile '$Profile'." -ForegroundColor Green
+  Write-Host "All $($plugins.Count) plugins installed into profile '$Profile'." -ForegroundColor Green
 } else {
   Write-Host "These failed, install them manually: $($failed -join ', ')" -ForegroundColor Yellow
 }
