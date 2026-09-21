@@ -27,6 +27,7 @@ dsh-draw
 dsh-fast
 dsh-fund-research
 dsh-industry-research
+dsh-laya
 dsh-library
 dsh-local-ai
 dsh-lsp-actions
