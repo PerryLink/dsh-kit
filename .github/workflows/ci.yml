@@ -35,7 +35,7 @@ jobs:
           Write-Host 'install-all.ps1 parses clean'
 
   parity:
-    name: plugin list parity (15 plugins)
+    name: plugin list parity (roster)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
