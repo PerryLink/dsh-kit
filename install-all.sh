@@ -5,6 +5,10 @@
 # The roster is plugins.txt next to this script. Do not inline a package list
 # here: scripts/check-parity.mjs fails when either installer hard-codes one, and
 # holds README.md's counts to the same file.
+#
+# Retired packages are not in plugins.txt, so this never installs them. Frozen
+# packages are, and are installed — a trailing "# ..." comment on their line
+# marks them; it is stripped here and counted for the summary below.
 set -u
 
 PROFILE="${1:-web}"
@@ -17,8 +21,10 @@ fi
 
 failed=""
 count=0
+frozen=0
 while IFS= read -r line; do
-  case "$line" in ''|'#'*) continue ;; esac
+  # drop a trailing "# ..." status comment, then surrounding whitespace
+  line="${line%%#*}"
   plugin=$(printf '%s' "$line" | tr -d ' \t\r')
   [ -n "$plugin" ] || continue
   count=$((count + 1))
@@ -26,8 +32,11 @@ while IFS= read -r line; do
   dsh plugin --profile "$PROFILE" add "$plugin" || failed="$failed $plugin"
 done < "$ROSTER"
 
+# report the frozen count from the roster's own marks, for the summary only
+frozen=$(grep -c 'FROZEN' "$ROSTER" 2>/dev/null || echo 0)
+
 if [ -z "$failed" ]; then
-  echo "All $count plugins installed into profile '$PROFILE'."
+  echo "All $count plugins installed into profile '$PROFILE' ($frozen of them frozen — see plugins.txt)."
 else
   echo "These failed, install them manually:$failed"
 fi

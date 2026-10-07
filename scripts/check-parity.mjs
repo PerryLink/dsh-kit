@@ -11,6 +11,11 @@
 // saying 40 for a week. Deriving is the fix: this script reads the roster, then
 // holds both installers and every count in README.md to it.
 //
+// It also guards the two failures this file was extended for (2026-10-07):
+//   * a retired, npm-deprecated package coming back into a fresh install, and
+//   * a family-table row losing its Status cell, which makes GitHub drop the
+//     retirement annotation from the rendered table without any visible error.
+//
 // Usage:
 //   node scripts/check-parity.mjs            # verify (CI runs this)
 //   node scripts/check-parity.mjs --write    # rewrite README.md's counts
@@ -21,19 +26,47 @@ import { fileURLToPath } from 'node:url'
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const failures = []
 
-/** The four ecosystem repositories that are not installable plugins. */
+/** The three ecosystem repositories that are not installable plugins. */
 const RESOURCES = ['dsh-catalog', 'dsh-plugin-certification', 'dsh-plugin-portal']
 const SPEC = /^(?:@[a-z0-9-]+\/)?[a-z0-9][a-z0-9._-]*$/
+
+/**
+ * 🚫 Retired: npm-deprecated, no further fixes or releases.
+ * `roster` are the ones the family roster counts; `corridor` are the two
+ * version-locked corridor legs, which were never roster members. None of them
+ * may appear in plugins.txt, and all of them stay on npm for existing installs.
+ */
+const RETIRED = {
+  roster: ['dsh-background-agents', 'dsh-session-pin', 'dsh-team-rooms'],
+  corridor: ['dsh-plugin-upgrade-015', 'dsh-plugin-upgrade-016'],
+}
+const RETIRED_SPECS = [...RETIRED.roster, ...RETIRED.corridor]
+
+/** npm spec -> repository name, for the specs that are not named after their repo. */
+const REPO_OF = {
+  '@perrylink/dsh-github': 'dsh-github',
+  '@perrylink/dsh-plugin-doctor': 'dsh-plugin-doctor',
+  '@perrylink/dsh-plugin-kit': 'dsh-plugin-kit',
+  '@perrylink/dsh-skill-pack-security-provider': 'dsh-skill-pack-security',
+  '@perrylink/dsh-ticktick': 'dsh-ticktick',
+}
+const repoOf = (spec) => REPO_OF[spec] ?? spec
 
 const read = (rel) => readFileSync(join(root, rel), 'utf8')
 
 // --- the roster ------------------------------------------------------------
 
 const rosterText = read('plugins.txt')
-const roster = rosterText
-  .split(/\r?\n/)
-  .map((line) => line.trim())
-  .filter((line) => line && !line.startsWith('#'))
+const roster = []
+const frozen = []
+for (const raw of rosterText.split(/\r?\n/)) {
+  const line = raw.trim()
+  if (!line || line.startsWith('#')) continue
+  // A trailing "# ..." comment records the package's maintenance status.
+  const spec = line.replace(/\s+#.*$/, '').trim()
+  roster.push(spec)
+  if (/#\s*🧊\s*FROZEN/.test(line)) frozen.push(spec)
+}
 
 if (roster.length === 0) failures.push('plugins.txt lists no packages')
 const seen = new Set()
@@ -42,8 +75,25 @@ for (const spec of roster) {
   if (seen.has(spec)) failures.push(`plugins.txt: duplicate "${spec}"`)
   seen.add(spec)
 }
-const deprecated = roster.filter((spec) => spec === 'dsh-plugin-upgrade-015' || spec === 'dsh-plugin-upgrade-rc1')
-for (const spec of deprecated) failures.push(`plugins.txt lists the deprecated name "${spec}"`)
+
+// The regression gate: a retired package must never be installable again.
+for (const spec of roster) {
+  if (RETIRED_SPECS.includes(spec)) {
+    failures.push(`plugins.txt lists the RETIRED package "${spec}" — retired packages are not installable`)
+  }
+}
+// ...and the frozen set is exactly the six the family documents.
+const FROZEN_REPOS = ['dsh-budget', 'dsh-memento', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend']
+const frozenRepos = frozen.map(repoOf).sort()
+if (frozenRepos.join(',') !== [...FROZEN_REPOS].sort().join(',')) {
+  failures.push(`plugins.txt marks ${frozenRepos.length} frozen package(s) [${frozenRepos.join(', ')}], expected the 6: ${FROZEN_REPOS.join(', ')}`)
+}
+
+const installCount = roster.length
+const frozenCount = frozen.length
+const activeCount = installCount - frozenCount
+const rosterCount = installCount + RETIRED.roster.length
+const counts = { installCount, frozenCount, activeCount, rosterCount, retiredRosterCount: RETIRED.roster.length }
 
 // --- no installer may carry its own list ----------------------------------
 
@@ -56,44 +106,66 @@ for (const file of ['install-all.sh', 'install-all.ps1']) {
   if (inline.length > 0) {
     failures.push(`${file} hard-codes ${inline.length} package name(s): ${inline.map((l) => l.trim()).join(', ')}`)
   }
+  // Both installers strip the trailing status comment before calling dsh.
+  if (!text.includes('#.*$') && !text.includes('%%#*')) {
+    failures.push(`${file} does not strip the trailing "# ..." status comment from plugins.txt`)
+  }
 }
 
 // --- README numbers -------------------------------------------------------
 
 const countPatterns = [
-  ['the headline', /\*\*One-command starter pack: install all (\d+) PerryLink DeepSeek Harness plugins\.\*\*/],
-  ['the highlights heading', /the installers cover the full (\d+)-plugin family/],
-  ['the family blurb', /one of the \[(\d+) DeepSeek Harness plugins\]/],
+  ['the headline active count', /\*\*One-command starter pack: (\d+) actively maintained/, counts.activeCount],
+  ['the headline install count', /plus (\d+) frozen ones kept installable — (\d+) npm specs/, counts.frozenCount, counts.installCount],
+  ['the highlights heading', /the installers cover all (\d+) npm specs/, counts.installCount],
+  ['the family blurb (active)', /one of the \*\*(\d+) actively maintained\*\*/, counts.activeCount],
+  ['the family blurb (roster)', /the roster is \*\*(\d+)\*\*, of which \*\*(\d+)\*\* are frozen and \*\*(\d+)\*\* retired/, counts.rosterCount, counts.frozenCount, counts.retiredRosterCount],
 ]
 
 let readme = read('README.md')
 if (process.argv.includes('--write')) {
-  for (const [, pattern] of countPatterns) {
-    readme = readme.replace(pattern, (match, digits) => match.replace(digits, String(roster.length)))
-  }
+  readme = readme.replace(countPatterns[0][1], (m, d) => m.replace(d, String(counts.activeCount)))
+  readme = readme.replace(countPatterns[1][1], (m, a, b) => m.replace(a, String(counts.frozenCount)).replace(b, String(counts.installCount)))
+  readme = readme.replace(countPatterns[2][1], (m, d) => m.replace(d, String(counts.installCount)))
+  readme = readme.replace(countPatterns[3][1], (m, d) => m.replace(d, String(counts.activeCount)))
+  readme = readme.replace(countPatterns[4][1], (m, a, b, c) =>
+    m.replace(a, String(counts.rosterCount)).replace(b, String(counts.frozenCount)).replace(c, String(counts.retiredRosterCount)))
   writeFileSync(join(root, 'README.md'), readme, 'utf8')
-  console.log(`check-parity: wrote README.md counts as ${roster.length}`)
+  console.log(`check-parity: wrote README.md counts as ${activeCount} active / ${frozenCount} frozen / ${installCount} specs / roster ${rosterCount}`)
 } else {
-  for (const [label, pattern] of countPatterns) {
+  for (const [label, pattern, ...expected] of countPatterns) {
     const match = readme.match(pattern)
     if (!match) {
-      failures.push(`README.md: ${label} no longer states a plugin count; update this gate`)
+      failures.push(`README.md: ${label} no longer states a count; update this gate`)
       continue
     }
-    if (Number(match[1]) !== roster.length) {
-      failures.push(`README.md: ${label} says ${match[1]}, plugins.txt has ${roster.length} (run: node scripts/check-parity.mjs --write)`)
-    }
+    expected.forEach((want, i) => {
+      if (Number(match[i + 1]) !== want) {
+        failures.push(`README.md: ${label} says ${match[i + 1]}, plugins.txt derives ${want} (run: node scripts/check-parity.mjs --write)`)
+      }
+    })
   }
 }
 
-// The family table is a hand-maintained Markdown table of `**[name](url)**`
-// rows. Two invariants: it must cover the roster plus the ecosystem resources
-// and nothing else, and it must never link to a third party — dsh-wechat sat in
-// it as a friendly collaboration until 2026-09-20, and a list headed "PerryLink
-// DSH Plugin Family" is the wrong place for someone else's package.
-const tableRows = [...readme.matchAll(/^\| \*\*\[([^\]]+)\]\((https:\/\/github\.com\/[^)]+)\)\*\* \|/gm)]
-  .map(([, name, url]) => ({ name, url }))
+// --- the family table -----------------------------------------------------
+//
+// A hand-maintained Markdown table of `**[name](url)**` rows. Invariants: every
+// row has the SAME number of cells as the header (a row with an extra cell
+// silently loses its last cell when GitHub renders it, which is how the frozen
+// annotations disappeared), it never links to a third party, and the retirement
+// status it shows matches the roster: exactly the frozen and retired rows carry
+// one, and no active row does.
+const tableHeader = readme.match(/^\| Plugin \| One-liner \| Status \|\s*$/m)
+if (!tableHeader) failures.push('README.md: the family table header is no longer "| Plugin | One-liner | Status |"')
+const headerCells = tableHeader ? tableHeader[0].split('|').length - 2 : 0
+
+const tableRows = [...readme.matchAll(/^\| \*\*\[([^\]]+)\]\((https:\/\/github\.com\/[^)]+)\)\*\* \|(.*)$/gm)]
+  .map(([, name, url, rest]) => {
+    const cells = rest.replace(/\|\s*$/, '').split('|').map((c) => c.trim())
+    return { name, url, cellCount: cells.length + 1, status: cells[cells.length - 1] ?? '' }
+  })
 if (tableRows.length === 0) failures.push('README.md: the family table has no rows')
+
 const tableSlugs = tableRows.map((row) => row.url.replace('https://github.com/', ''))
 for (const slug of tableSlugs) {
   if (!slug.startsWith('PerryLink/')) failures.push(`README.md family table lists a third-party repository: ${slug}`)
@@ -108,12 +180,37 @@ for (const resource of RESOURCES) {
   if (!tableRepos.has(resource)) failures.push(`README.md family table dropped the ecosystem repository ${resource}`)
 }
 
+for (const row of tableRows) {
+  if (headerCells && row.cellCount !== headerCells) {
+    failures.push(`README.md family table: ${row.name} has ${row.cellCount} cells but the header has ${headerCells} — GitHub drops the extra cell, taking the status with it`)
+  }
+}
+// Every row needs a status cell, so the split above always yields one.
+const statusOf = new Map(tableRows.map((row) => [row.name, row.status]))
+for (const spec of frozen) {
+  const repo = repoOf(spec)
+  if (!statusOf.get(repo)) failures.push(`README.md family table: ${repo} is frozen in plugins.txt but its row carries no status`)
+}
+for (const repo of RETIRED.roster) {
+  const status = statusOf.get(repo)
+  if (!status) failures.push(`README.md family table: ${repo} is retired but its row carries no status`)
+  else if (!/RETIRED/.test(status)) failures.push(`README.md family table: ${repo} is retired but its status does not say RETIRED`)
+}
+const marked = new Set([...frozen.map(repoOf), ...RETIRED.roster])
+for (const row of tableRows) {
+  if (!marked.has(row.name) && row.status) {
+    failures.push(`README.md family table: ${row.name} is neither frozen nor retired but its row carries the status "${row.status}"`)
+  }
+}
+
 if (failures.length > 0) {
   console.error(`check-parity: FAIL (${failures.length})`)
   for (const failure of failures) console.error(`  - ${failure}`)
   process.exit(1)
 }
 console.log(
-  `check-parity: ok — plugins.txt has ${roster.length} specs, both installers read it, ` +
-    `README.md states ${roster.length} in 3 places, and the family table carries ${tableRows.length} PerryLink repositories`,
+  `check-parity: ok — plugins.txt has ${installCount} specs ` +
+    `(${activeCount} active + ${frozenCount} frozen, roster ${rosterCount}, ${RETIRED_SPECS.length} retired excluded), ` +
+    `both installers read it and strip the status comment, README.md states ${activeCount}/${frozenCount}/${installCount}/${rosterCount} in 5 places, ` +
+    `and the family table carries ${tableRows.length} PerryLink repositories, every row ${headerCells} cells wide with the right status`,
 )
