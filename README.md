@@ -4,7 +4,7 @@
 
 [![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-kit/ci.yml?branch=main)](https://github.com/PerryLink/dsh-kit/actions)
 
-**One-command starter pack: 33 actively maintained PerryLink DeepSeek Harness plugins, plus 6 frozen ones kept installable — 39 npm specs, one command.**
+**One-command starter pack: 86 actively maintained PerryLink DeepSeek Harness plugins, plus 6 frozen ones kept installable — 92 npm specs, one command.**
 
 [dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus the rest of the family, across security, workflows, research, messaging bridges, and developer experience. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
 
@@ -28,7 +28,7 @@ dsh plugin --profile web add dsh-permission-rules    # allow/deny/ask rules
 dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 ```
 
-## What's inside (curated highlights — the installers cover all 39 npm specs)
+## What's inside (curated highlights — the installers cover all 92 npm specs)
 
 Two of the highlights below are **not** actively developed any more. They stay
 listed, and stay installable, because people already run them: 🧊 **FROZEN**
@@ -88,7 +88,7 @@ Issues and feature requests: open them on the individual plugin repo, or discuss
 
 ## PerryLink DSH Plugin Family
 
-This project is one of the **33 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **42**, of which **6** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
+This project is one of the **86 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **95**, of which **6** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
 
 | Plugin | One-liner | Status |
 |---|---|---|
