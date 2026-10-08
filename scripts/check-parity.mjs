@@ -32,13 +32,16 @@ const SPEC = /^(?:@[a-z0-9-]+\/)?[a-z0-9][a-z0-9._-]*$/
 
 /**
  * 🚫 Retired: npm-deprecated, no further fixes or releases.
- * `roster` are the ones the family roster counts; `corridor` are the two
+ * `roster` are the ones the family roster counts; `corridor` are the three
  * version-locked corridor legs, which were never roster members. None of them
  * may appear in plugins.txt, and all of them stay on npm for existing installs.
+ * `-rc1` was missing from this object until 2026-10-08 although it was retired
+ * on the same day as the other two and is npm-deprecated in the same way, so
+ * the gate would not have caught it coming back.
  */
 const RETIRED = {
   roster: ['dsh-background-agents', 'dsh-session-pin', 'dsh-team-rooms'],
-  corridor: ['dsh-plugin-upgrade-015', 'dsh-plugin-upgrade-016'],
+  corridor: ['dsh-plugin-upgrade-015', 'dsh-plugin-upgrade-016', 'dsh-plugin-upgrade-rc1'],
 }
 const RETIRED_SPECS = [...RETIRED.roster, ...RETIRED.corridor]
 

@@ -13,16 +13,21 @@
 # They stay installable and stay on this list. Marked so nobody reads them as
 # actively developed work.
 #
-# ── 🚫 Retired (5): must NEVER be listed below ─────────────────────────────
-# npm-deprecated, no further fixes or releases. This is also the list the gate
-# in scripts/check-parity.mjs fails on, so a retired package cannot come back
-# through this file. The names stay on the registry for anyone already on them:
+# ── 🚫 Retired (6): must NEVER be listed below ─────────────────────────────
+# npm-deprecated, no further fixes or releases. The gate in
+# scripts/check-parity.mjs holds the same set in its RETIRED object and fails on
+# any of these appearing below, so a retired package cannot come back through
+# this file. The names stay on the registry for anyone already on them:
 #   dsh-background-agents    the host ships native continuable subagents
 #   dsh-session-pin          the host ships session pinning natively
 #   dsh-team-rooms           the host ships the Agent Teams subsystem
 #   dsh-plugin-upgrade-015   superseded by dsh-plugin-upgrade, which carries
 #                            every corridor in one package
 #   dsh-plugin-upgrade-016   never published; folded into dsh-plugin-upgrade
+#   dsh-plugin-upgrade-rc1   superseded by dsh-plugin-upgrade 2.0.0, which
+#                            carries its 0.1.3-alpha.1 -> 0.1.5-rc.1 corridor
+#                            (retired 2026-10-05; missing from this list and
+#                            from RETIRED.corridor until 2026-10-08)
 #
 # Third-party packages do not belong here at all, however friendly the
 # collaboration (dsh-wechat was listed until 2026-09-20; it is pan17's package).
