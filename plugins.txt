@@ -13,59 +13,59 @@
 # Published to npm with SLSA provenance, Apache-2.0, five-language READMEs, and
 # a per-repo check:citations gate that holds every rule quotation to its
 # rules/evidence/ record. All active. See D:/Projects/dsh-plugins/AGENTS.md.
-dsh-aqua-input-check
-dsh-archive-check
-dsh-bid-ca-precheck
-dsh-bid-qual-check
-dsh-contract-stance
-dsh-customs-doc-check
-dsh-demurrage-ledger
-dsh-drill-script-check
-dsh-eia-guide-check
-dsh-emergency-plan
-dsh-essay-rubric-check
-dsh-evidence-check
-dsh-export-ctl-check
-dsh-fmea-table-check
-dsh-forecast-penalty
-dsh-gongwen-flow-check
-dsh-gongwen-word-check
-dsh-guard-plan-qc
-dsh-hazchem-check
-dsh-hazplan-check
-dsh-hidden-risk-map
-dsh-hs-classify
-dsh-icd-rule-check
-dsh-lawcite-adapter
-dsh-lc-doc-check
-dsh-learning-gap-check
-dsh-medrec-qc
-dsh-nsfc-form-check
-dsh-nurse-record-check
-dsh-origin-rvc-check
-dsh-ota-review-check
-dsh-paper-doc-adapter
-dsh-permit-report-check
-dsh-pipeline-check
-dsh-pleading-draft
-dsh-policy-brief-draft
-dsh-power-loss-split
-dsh-power-ticket-check
-dsh-ppap-check
-dsh-protest-deadline
-dsh-railway-window
-dsh-repair-order-qc
-dsh-review-reply-check
-dsh-rulefile-check
-dsh-safety-brief-check
-dsh-site-log-check
-dsh-soe-decision-check
-dsh-soilwater-check
-dsh-sop-sync-check
-dsh-spc-gbt-adapter
-dsh-tender-extract
-dsh-tender-matrix
-dsh-warranty-calc
+dsh-aqua-input-check  # opt-in
+dsh-archive-check  # opt-in
+dsh-bid-ca-precheck  # opt-in
+dsh-bid-qual-check  # opt-in
+dsh-contract-stance  # opt-in
+dsh-customs-doc-check  # opt-in
+dsh-demurrage-ledger  # opt-in
+dsh-drill-script-check  # opt-in
+dsh-eia-guide-check  # opt-in
+dsh-emergency-plan  # opt-in
+dsh-essay-rubric-check  # opt-in
+dsh-evidence-check  # opt-in
+dsh-export-ctl-check  # opt-in
+dsh-fmea-table-check  # opt-in
+dsh-forecast-penalty  # opt-in
+dsh-gongwen-flow-check  # opt-in
+dsh-gongwen-word-check  # opt-in
+dsh-guard-plan-qc  # opt-in
+dsh-hazchem-check  # opt-in
+dsh-hazplan-check  # opt-in
+dsh-hidden-risk-map  # opt-in
+dsh-hs-classify  # opt-in
+dsh-icd-rule-check  # opt-in
+dsh-lawcite-adapter  # opt-in
+dsh-lc-doc-check  # opt-in
+dsh-learning-gap-check  # opt-in
+dsh-medrec-qc  # opt-in
+dsh-nsfc-form-check  # opt-in
+dsh-nurse-record-check  # opt-in
+dsh-origin-rvc-check  # opt-in
+dsh-ota-review-check  # opt-in
+dsh-paper-doc-adapter  # opt-in
+dsh-permit-report-check  # opt-in
+dsh-pipeline-check  # opt-in
+dsh-pleading-draft  # opt-in
+dsh-policy-brief-draft  # opt-in
+dsh-power-loss-split  # opt-in
+dsh-power-ticket-check  # opt-in
+dsh-ppap-check  # opt-in
+dsh-protest-deadline  # opt-in
+dsh-railway-window  # opt-in
+dsh-repair-order-qc  # opt-in
+dsh-review-reply-check  # opt-in
+dsh-rulefile-check  # opt-in
+dsh-safety-brief-check  # opt-in
+dsh-site-log-check  # opt-in
+dsh-soe-decision-check  # opt-in
+dsh-soilwater-check  # opt-in
+dsh-sop-sync-check  # opt-in
+dsh-spc-gbt-adapter  # opt-in
+dsh-tender-extract  # opt-in
+dsh-tender-matrix  # opt-in
+dsh-warranty-calc  # opt-in
 
 # ── 🧊 Frozen (6): no new features, minimal breakage fixes only ────────────
 # They stay installable and stay on this list. Marked so nobody reads them as

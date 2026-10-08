@@ -62,6 +62,7 @@ const read = (rel) => readFileSync(join(root, rel), 'utf8')
 const rosterText = read('plugins.txt')
 const roster = []
 const frozen = []
+const optIn = []
 for (const raw of rosterText.split(/\r?\n/)) {
   const line = raw.trim()
   if (!line || line.startsWith('#')) continue
@@ -69,6 +70,10 @@ for (const raw of rosterText.split(/\r?\n/)) {
   const spec = line.replace(/\s+#.*$/, '').trim()
   roster.push(spec)
   if (/#\s*🧊\s*FROZEN/.test(line)) frozen.push(spec)
+  // `# opt-in` means the installers skip it unless asked. It still counts as a
+  // roster plugin; what it does not count as is something a one-line starter
+  // pack installs by default.
+  if (/#\s*opt-in/.test(line)) optIn.push(spec)
 }
 
 if (roster.length === 0) failures.push('plugins.txt lists no packages')
@@ -96,7 +101,17 @@ const installCount = roster.length
 const frozenCount = frozen.length
 const activeCount = installCount - frozenCount
 const rosterCount = installCount + RETIRED.roster.length
-const counts = { installCount, frozenCount, activeCount, rosterCount, retiredRosterCount: RETIRED.roster.length }
+const optInCount = optIn.length
+const defaultInstallCount = installCount - optInCount
+const counts = {
+  installCount,
+  frozenCount,
+  activeCount,
+  rosterCount,
+  optInCount,
+  defaultInstallCount,
+  retiredRosterCount: RETIRED.roster.length,
+}
 
 // --- no installer may carry its own list ----------------------------------
 
@@ -120,7 +135,7 @@ for (const file of ['install-all.sh', 'install-all.ps1']) {
 const countPatterns = [
   ['the headline active count', /\*\*One-command starter pack: (\d+) actively maintained/, counts.activeCount],
   ['the headline install count', /plus (\d+) frozen ones kept installable — (\d+) npm specs/, counts.frozenCount, counts.installCount],
-  ['the highlights heading', /the installers cover all (\d+) npm specs/, counts.installCount],
+  ['the highlights heading', /the installers cover (\d+) npm specs, plus (\d+) opt-in/, counts.defaultInstallCount, counts.optInCount],
   ['the family blurb (active)', /one of the \*\*(\d+) actively maintained\*\*/, counts.activeCount],
   ['the family blurb (roster)', /the roster is \*\*(\d+)\*\*, of which \*\*(\d+)\*\* are frozen and \*\*(\d+)\*\* retired/, counts.rosterCount, counts.frozenCount, counts.retiredRosterCount],
 ]
@@ -129,7 +144,8 @@ let readme = read('README.md')
 if (process.argv.includes('--write')) {
   readme = readme.replace(countPatterns[0][1], (m, d) => m.replace(d, String(counts.activeCount)))
   readme = readme.replace(countPatterns[1][1], (m, a, b) => m.replace(a, String(counts.frozenCount)).replace(b, String(counts.installCount)))
-  readme = readme.replace(countPatterns[2][1], (m, d) => m.replace(d, String(counts.installCount)))
+  readme = readme.replace(countPatterns[2][1], (m, a, b) =>
+    m.replace(a, String(counts.defaultInstallCount)).replace(b, String(counts.optInCount)))
   readme = readme.replace(countPatterns[3][1], (m, d) => m.replace(d, String(counts.activeCount)))
   readme = readme.replace(countPatterns[4][1], (m, a, b, c) =>
     m.replace(a, String(counts.rosterCount)).replace(b, String(counts.frozenCount)).replace(c, String(counts.retiredRosterCount)))
