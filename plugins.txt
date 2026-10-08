@@ -9,6 +9,64 @@
 # A package belongs here when it is installable from npm (`dsh.bundle.patch`
 # declared and the patch file committed), published, and NOT retired.
 #
+# ── 🆕 Compliance checkers (53): added 2026-10-08 ──────────────────
+# Published to npm with SLSA provenance, Apache-2.0, five-language READMEs, and
+# a per-repo check:citations gate that holds every rule quotation to its
+# rules/evidence/ record. All active. See D:/Projects/dsh-plugins/AGENTS.md.
+dsh-aqua-input-check
+dsh-archive-check
+dsh-bid-ca-precheck
+dsh-bid-qual-check
+dsh-contract-stance
+dsh-customs-doc-check
+dsh-demurrage-ledger
+dsh-drill-script-check
+dsh-eia-guide-check
+dsh-emergency-plan
+dsh-essay-rubric-check
+dsh-evidence-check
+dsh-export-ctl-check
+dsh-fmea-table-check
+dsh-forecast-penalty
+dsh-gongwen-flow-check
+dsh-gongwen-word-check
+dsh-guard-plan-qc
+dsh-hazchem-check
+dsh-hazplan-check
+dsh-hidden-risk-map
+dsh-hs-classify
+dsh-icd-rule-check
+dsh-lawcite-adapter
+dsh-lc-doc-check
+dsh-learning-gap-check
+dsh-medrec-qc
+dsh-nsfc-form-check
+dsh-nurse-record-check
+dsh-origin-rvc-check
+dsh-ota-review-check
+dsh-paper-doc-adapter
+dsh-permit-report-check
+dsh-pipeline-check
+dsh-pleading-draft
+dsh-policy-brief-draft
+dsh-power-loss-split
+dsh-power-ticket-check
+dsh-ppap-check
+dsh-protest-deadline
+dsh-railway-window
+dsh-repair-order-qc
+dsh-review-reply-check
+dsh-rulefile-check
+dsh-safety-brief-check
+dsh-site-log-check
+dsh-soe-decision-check
+dsh-soilwater-check
+dsh-sop-sync-check
+dsh-spc-gbt-adapter
+dsh-tender-extract
+dsh-tender-matrix
+dsh-warranty-calc
+
 # ── 🧊 Frozen (6): no new features, minimal breakage fixes only ────────────
 # They stay installable and stay on this list. Marked so nobody reads them as
 # actively developed work.
