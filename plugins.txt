@@ -67,9 +67,10 @@ dsh-tender-extract  # opt-in
 dsh-tender-matrix  # opt-in
 dsh-warranty-calc  # opt-in
 
-# ── 🧊 Frozen (6): no new features, minimal breakage fixes only ────────────
+# ── 🧊 Frozen (5): no new features, minimal breakage fixes only ────────────
 # They stay installable and stay on this list. Marked so nobody reads them as
-# actively developed work.
+# actively developed work. `dsh-memento` left this set on 2026-10-12 (unfrozen)
+# and is listed further down as an ordinary active package.
 #
 # ── 🚫 Retired (6): must NEVER be listed below ─────────────────────────────
 # npm-deprecated, no further fixes or releases. The gate in
@@ -110,7 +111,7 @@ dsh-local-ai
 dsh-lsp-actions
 dsh-mask
 dsh-mcp-panel
-dsh-memento                       # 🧊 FROZEN — see the repo README
+dsh-memento
 dsh-observe
 dsh-output-styles
 dsh-permission-rules

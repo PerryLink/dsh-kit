@@ -4,7 +4,7 @@
 
 [![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-kit/ci.yml?branch=main)](https://github.com/PerryLink/dsh-kit/actions)
 
-**One-command starter pack: 86 actively maintained PerryLink DeepSeek Harness plugins, plus 6 frozen ones kept installable — 92 npm specs, one command.**
+**One-command starter pack: 87 actively maintained PerryLink DeepSeek Harness plugins, plus 5 frozen ones kept installable — 92 npm specs, one command.**
 
 [dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus the rest of the family, across security, workflows, research, messaging bridges, and developer experience. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
 
@@ -30,11 +30,11 @@ dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 
 ## What's inside (curated highlights — the installers cover 39 npm specs, plus 53 opt-in)
 
-Two of the highlights below are **not** actively developed any more. They stay
-listed, and stay installable, because people already run them: 🧊 **FROZEN**
-means no new features and only a real breakage gets fixed, 🚫 **RETIRED** means
-the host now does this natively and the package is npm-deprecated — retired
-packages are **not** in `plugins.txt`, so a fresh install never pulls them in.
+Two of the highlights below are **retired** and one is **frozen**; `dsh-memento` sat in the frozen set
+until it was **unfrozen on 2026-10-12**. They all stay listed, and stay installable, because people
+already run them: 🧊 **FROZEN** means no new features and only a real breakage gets fixed, 🚫 **RETIRED**
+means the host now does this natively and the package is npm-deprecated — retired packages are **not** in
+`plugins.txt`, so a fresh install never pulls them in.
 
 ### The Claude Code parity trio
 
@@ -48,7 +48,7 @@ packages are **not** in `plugins.txt`, so a fresh install never pulls them in.
 
 | Plugin | One-liner | Status |
 |---|---|---|
-| [dsh-memento](https://github.com/PerryLink/dsh-memento) | Approval-gated cross-session memory: `ctx.memory` + SQLite + `memory` tool | 🧊 FROZEN — see the repo README |
+| [dsh-memento](https://github.com/PerryLink/dsh-memento) | Approval-gated cross-session memory: `ctx.memory` + SQLite + `memory` tool | |
 | [dsh-background-agents](https://github.com/PerryLink/dsh-background-agents) | Durable background child agents: sidebar progress, messaging, interrupt | 🚫 **RETIRED** — the host ships native continuable subagents |
 | [dsh-doublecheck](https://github.com/PerryLink/dsh-doublecheck) | Engineering-discipline guard: requirements grill, test gates, adversary review | |
 | [dsh-auto-review](https://github.com/PerryLink/dsh-auto-review) | Second-model auto-review on the approval chain, fail-closed | |
@@ -88,7 +88,7 @@ Issues and feature requests: open them on the individual plugin repo, or discuss
 
 ## PerryLink DSH Plugin Family
 
-This project is one of the **86 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **95**, of which **6** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
+This project is one of the **87 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **95**, of which **5** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
 
 | Plugin | One-liner | Status |
 |---|---|---|
@@ -116,7 +116,7 @@ This project is one of the **86 actively maintained** DeepSeek Harness plugins f
 | **[dsh-lsp-actions](https://github.com/PerryLink/dsh-lsp-actions)** | LSP diagnostics, formatting, completion, code actions, symbols and rename | |
 | **[dsh-mask](https://github.com/PerryLink/dsh-mask)** | PII masking at the model boundary with a host-side restore table | |
 | **[dsh-mcp-panel](https://github.com/PerryLink/dsh-mcp-panel)** | MCP management console: `/mcp` command, Settings tab and trial calls | |
-| **[dsh-memento](https://github.com/PerryLink/dsh-memento)** | Approval-gated cross-session memory protocol (`ctx.memory` + SQLite) | 🧊 FROZEN — see the repo README |
+| **[dsh-memento](https://github.com/PerryLink/dsh-memento)** | Approval-gated cross-session memory protocol (`ctx.memory` + SQLite) | |
 | **[dsh-observe](https://github.com/PerryLink/dsh-observe)** | OpenTelemetry and Langfuse telemetry export from the session event stream | |
 | **[dsh-output-styles](https://github.com/PerryLink/dsh-output-styles)** | Runtime-switchable model output styles | |
 | **[dsh-permission-rules](https://github.com/PerryLink/dsh-permission-rules)** | Declarative allow/deny/ask rules plus a process-level network policy | |

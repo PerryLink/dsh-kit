@@ -90,11 +90,12 @@ for (const spec of roster) {
     failures.push(`plugins.txt lists the RETIRED package "${spec}" — retired packages are not installable`)
   }
 }
-// ...and the frozen set is exactly the six the family documents.
-const FROZEN_REPOS = ['dsh-budget', 'dsh-memento', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend']
+// ...and the frozen set is exactly the five the family documents.
+// (dsh-memento was unfrozen on 2026-10-12 and is an ordinary active package now.)
+const FROZEN_REPOS = ['dsh-budget', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend']
 const frozenRepos = frozen.map(repoOf).sort()
 if (frozenRepos.join(',') !== [...FROZEN_REPOS].sort().join(',')) {
-  failures.push(`plugins.txt marks ${frozenRepos.length} frozen package(s) [${frozenRepos.join(', ')}], expected the 6: ${FROZEN_REPOS.join(', ')}`)
+  failures.push(`plugins.txt marks ${frozenRepos.length} frozen package(s) [${frozenRepos.join(', ')}], expected the ${FROZEN_REPOS.length}: ${FROZEN_REPOS.join(', ')}`)
 }
 
 const installCount = roster.length
