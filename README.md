@@ -30,9 +30,8 @@ dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 
 ## What's inside (curated highlights — the installers cover 39 npm specs, plus 53 opt-in)
 
-Two of the highlights below are **retired** and one is **frozen**; `dsh-memento` sat in the frozen set
-until it was **unfrozen on 2026-10-12**. They all stay listed, and stay installable, because people
-already run them: 🧊 **FROZEN** means no new features and only a real breakage gets fixed, 🚫 **RETIRED**
+Two of the highlights below are **retired** and one is **frozen**. They all stay listed, and stay
+installable, because people already run them: 🧊 **FROZEN** means no new features and only a real breakage gets fixed, 🚫 **RETIRED**
 means the host now does this natively and the package is npm-deprecated — retired packages are **not** in
 `plugins.txt`, so a fresh install never pulls them in.
 

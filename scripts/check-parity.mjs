@@ -91,7 +91,6 @@ for (const spec of roster) {
   }
 }
 // ...and the frozen set is exactly the five the family documents.
-// (dsh-memento was unfrozen on 2026-10-12 and is an ordinary active package now.)
 const FROZEN_REPOS = ['dsh-budget', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend']
 const frozenRepos = frozen.map(repoOf).sort()
 if (frozenRepos.join(',') !== [...FROZEN_REPOS].sort().join(',')) {
