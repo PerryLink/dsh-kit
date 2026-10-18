@@ -4,7 +4,7 @@
 
 [![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-kit/ci.yml?branch=main)](https://github.com/PerryLink/dsh-kit/actions)
 
-**One-command starter pack: 87 actively maintained PerryLink DeepSeek Harness plugins, plus 5 frozen ones kept installable — 92 npm specs, one command.**
+**One-command starter pack: 88 actively maintained PerryLink DeepSeek Harness plugins, plus 5 frozen ones kept installable — 93 npm specs, one command.**
 
 [dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus the rest of the family, across security, workflows, research, messaging bridges, and developer experience. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
 
@@ -28,7 +28,7 @@ dsh plugin --profile web add dsh-permission-rules    # allow/deny/ask rules
 dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 ```
 
-## What's inside (curated highlights — the installers cover 39 npm specs, plus 53 opt-in)
+## What's inside (curated highlights — the installers cover 40 npm specs, plus 53 opt-in)
 
 Two of the highlights below are **retired** and one is **frozen**. They all stay listed, and stay
 installable, because people already run them: 🧊 **FROZEN** means no new features and only a real breakage gets fixed, 🚫 **RETIRED**
@@ -87,7 +87,7 @@ Issues and feature requests: open them on the individual plugin repo, or discuss
 
 ## PerryLink DSH Plugin Family
 
-This project is one of the **87 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **95**, of which **5** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
+This project is one of the **88 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **96**, of which **5** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
 
 | Plugin | One-liner | Status |
 |---|---|---|
@@ -96,11 +96,13 @@ This project is one of the **87 actively maintained** DeepSeek Harness plugins f
 | **[dsh-background-agents](https://github.com/PerryLink/dsh-background-agents)** | Durable background child agents with a Web UI sidebar, messaging and interrupt | 🚫 **RETIRED** — see the note above |
 | **[dsh-budget](https://github.com/PerryLink/dsh-budget)** | Cost governance for DeepSeek Harness: budgets, carbon, and latency in one panel. | 🧊 FROZEN — see the repo README |
 | **[dsh-catalog](https://github.com/PerryLink/dsh-catalog)** | DSH Desktop Market standard catalog source for the PerryLink family | |
+| **[dsh-attention-index](https://github.com/PerryLink/dsh-attention-index)** | Public task-conditioned Community Bench registry, leaderboard and badges | |
 | **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** | Read-only MCP server exposing the certification registry: grades, snapshots and five-dimension evidence | |
 | **[dsh-checkpoint-rewind](https://github.com/PerryLink/dsh-checkpoint-rewind)** | Unified session + workspace + config checkpoints with one-shot `/rewind` | |
 | **[dsh-claude-move](https://github.com/PerryLink/dsh-claude-move)** | Migrate Claude Code, Codex, OpenCode and Hermes sessions, memories and skills into DSH | 🧊 FROZEN — see the repo README |
 | **[dsh-click](https://github.com/PerryLink/dsh-click)** | Cross-platform native desktop control for DeepSeek Harness — Windows first. | |
 | **[dsh-composer-history](https://github.com/PerryLink/dsh-composer-history)** | Terminal-style input history for the web composer: arrows, Ctrl+R search | |
+| **[dsh-community-bench](https://github.com/PerryLink/dsh-community-bench)** | In-app Community Bench tab that reads the public task-conditioned registry; no local scoring | |
 | **[dsh-data-quality](https://github.com/PerryLink/dsh-data-quality)** | Deterministic dataset profiling, cleaning and citation verification | |
 | **[dsh-defend](https://github.com/PerryLink/dsh-defend)** | Prompt-injection, jailbreak, and secret-leak defense for DeepSeek Harness. | 🧊 FROZEN — see the repo README |
 | **[dsh-doublecheck](https://github.com/PerryLink/dsh-doublecheck)** | Engineering-discipline guard: requirements grill, test gates, adversary review | |

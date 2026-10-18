@@ -96,6 +96,7 @@ dsh-cert-mcp
 dsh-checkpoint-rewind
 dsh-claude-move                   # 🧊 FROZEN — see the repo README
 dsh-click
+dsh-community-bench
 dsh-composer-history
 dsh-data-quality
 dsh-defend                        # 🧊 FROZEN — see the repo README

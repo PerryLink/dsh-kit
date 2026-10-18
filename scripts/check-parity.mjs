@@ -27,7 +27,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const failures = []
 
 /** The three ecosystem repositories that are not installable plugins. */
-const RESOURCES = ['dsh-catalog', 'dsh-plugin-certification', 'dsh-plugin-portal']
+const RESOURCES = ['dsh-attention-index', 'dsh-catalog', 'dsh-plugin-certification', 'dsh-plugin-portal']
 const SPEC = /^(?:@[a-z0-9-]+\/)?[a-z0-9][a-z0-9._-]*$/
 
 /**
