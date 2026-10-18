@@ -82,7 +82,7 @@ means the host now does this natively and the package is npm-deprecated — reti
 - Install scripts are **idempotent** — safe to re-run.
 - `dsh-skill-pack-security` installs from its published provider package (`@perrylink/dsh-skill-pack-security-provider`); everything else installs from npm.
 - Versions track the latest npm releases; pin a specific version per plugin if you need reproducibility.
-- **Monthly download baseline:** `node scripts/npm-downloads-snapshot.mjs` reads this file's own roster and appends every spec's week and month npm downloads to `data/npm-downloads-snapshots.json`, so a distribution change can be measured against a previous month instead of asserted. It writes only that series — the profile page's download figure stays where it is. See [`scripts/README-npm-downloads-snapshot.md`](scripts/README-npm-downloads-snapshot.md).
+- **Monthly download baseline:** `node scripts/npm-downloads-snapshot.mjs` reads this file's own roster and appends every spec's week and month npm downloads to `data/npm-downloads-snapshots.json`, so a distribution change can be measured against a previous month instead of asserted. It writes only that series — the profile page's download figure stays where it is. The series lives in `data/npm-downloads-snapshots.json`.
 - Deprecated names are not installed: `dsh-background-agents`, `dsh-session-pin` and `dsh-team-rooms` (the host implements all three natively now), and `dsh-plugin-upgrade-015` plus its earlier name `dsh-plugin-upgrade-rc1` (superseded by `dsh-plugin-upgrade`, which carries every corridor in one package). They stay on npm for anyone who already installed them.
 - License: Apache-2.0 (matching the plugin family).
 
@@ -94,7 +94,7 @@ Issues and feature requests: open them on the individual plugin repo, or discuss
 
 The family states its size in five repositories, and the numbers only look contradictory
 because each one counts a different set: 103 working copies, 99 of them non-private, 96 catalog
-entries, 95 roster entries, 92 install specs, 45 family-table rows, 42 and 34 in the default
+entries, 96 roster entries, 93 install specs, 46 family-table rows, 42 and 34 in the default
 scope, 87 in the full one. Every row below is **derived, not typed**, and
 `node scripts/check-parity.mjs` holds each one to `plugins.txt` (or to the file named in the last
 column) and fails if a sixth definition appears anywhere in a sibling README's family blurb.
@@ -103,13 +103,13 @@ column) and fails if a sixth definition appears anywhere in a sibling README's f
 |---|---|---|---|---|
 | Working copies | **103** | top-level directories carrying a `package.json`, both workspaces | 50 (`dsh/plugins`) + 53 (`dsh-plugins`) | measured; never quoted in prose |
 | Non-private packages | **99** | those 103 minus the `"private": true` ones | 103 − `dsh-catalog`, `dsh-plugin-certification`, `dsh-skill-pack-security`, `jevcore` | measured; never quoted in prose |
-| Install specs | **92** | one npm spec per non-comment line | 39 default + 53 `# opt-in` checkers | `plugins.txt` |
-| Default install | **39** | what a plain `install-all.sh <profile>` installs | 92 − 53 | `plugins.txt`; gated in this page's headline |
-| Active — full scope | **87** | install specs minus the frozen ones | 92 − 5 | this page's headline and its family blurb |
+| Install specs | **93** | one npm spec per non-comment line | 39 default + 54 `# opt-in` checkers | `plugins.txt` |
+| Default install | **39** | what a plain `install-all.sh <profile>` installs | 93 − 54 | `plugins.txt`; gated in this page's headline |
+| Active — full scope | **88** | install specs minus the frozen ones | 93 − 5 | this page's headline and its family blurb |
 | Active — default scope | **34** | default install minus the frozen ones | 39 − 5 | every per-plugin README's family blurb |
-| Roster — full scope | **95** | every roster member, retired included | 92 + 3 retired | this page's family blurb |
+| Roster — full scope | **96** | every roster member, retired included | 93 + 3 retired | this page's family blurb |
 | Roster — default scope | **42** | default install plus the retired members | 39 + 3 | every per-plugin README's family blurb |
-| Family-table rows | **45** | rows a family table actually lists; retired rows are kept, never deleted | 41 plugin repos + `dsh-plugin-kit` + `dsh-catalog` + `dsh-plugin-certification` + `dsh-plugin-upgrade-015` | every README's family table |
+| Family-table rows | **46** | rows a family table actually lists; retired rows are kept, never deleted | 42 plugin repos + `dsh-plugin-kit` + `dsh-catalog` + `dsh-plugin-certification` + `dsh-plugin-upgrade-015` | every README's family table |
 | Machine-readable roster | **95** entries | `dsh-plugin-kit/data/repos.json` | 94 with `role != "infra"` + the `dsh-plugin-kit` infra entry | `dsh-plugin-kit/data/repos.json` |
 | Catalog entries | **96** | rows in the catalog's own table | 95 family repositories + the third-party `dsh-phocinae` | `dsh-catalog/data/packages.json` |
 
