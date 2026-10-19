@@ -8,9 +8,10 @@
 
 [dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus the rest of the family, across security, workflows, research, messaging bridges, and developer experience. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
 
-![Terminal demo of dsh-kit](docs/assets/dsh-kit-hero.png)
+![Workflow diagram for dsh-kit](docs/assets/dsh-kit-flow.svg)
 
-![Animated terminal demo of dsh-kit](docs/assets/dsh-kit-demo.gif)
+*Workflow overview: call → plugin → result. The kit is the maintenance surface.*
+
 
 ## Quick start
 
