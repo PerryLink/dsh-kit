@@ -187,6 +187,9 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-ticktick](https://github.com/PerryLink/dsh-ticktick)** |  |
 | **[dsh-translate](https://github.com/PerryLink/dsh-translate)** |  |
 | **[dsh-warranty-calc](https://github.com/PerryLink/dsh-warranty-calc)** |  |
+| **[dsh-catalog](https://github.com/PerryLink/dsh-catalog)** |  |
+| **[dsh-plugin-certification](https://github.com/PerryLink/dsh-plugin-certification)** |  |
+| **[dsh-plugin-portal](https://github.com/PerryLink/dsh-plugin-portal)** |  |
 | **[dsh-budget](https://github.com/PerryLink/dsh-budget)** | 🧊 FROZEN — see the repo README |
 | **[dsh-claude-move](https://github.com/PerryLink/dsh-claude-move)** | 🧊 FROZEN — see the repo README |
 | **[dsh-defend](https://github.com/PerryLink/dsh-defend)** | 🧊 FROZEN — see the repo README |
