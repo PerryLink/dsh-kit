@@ -115,6 +115,8 @@ dsh-memento
 dsh-observe
 dsh-output-styles
 dsh-permission-rules
+dsh-phocinae
+dsh-phone-inbox
 dsh-plugin-guide
 dsh-plugin-upgrade
 dsh-reach                         # 🧊 FROZEN — see the repo README
@@ -124,6 +126,7 @@ dsh-session-sync
 dsh-talk
 dsh-test-drive
 dsh-translate
+@perrylink/dsh-checkers-suite
 @perrylink/dsh-github
 @perrylink/dsh-plugin-doctor
 @perrylink/dsh-plugin-kit

@@ -4,7 +4,7 @@
 
 [![CI](https://img.shields.io/github/actions/workflow/status/PerryLink/dsh-kit/ci.yml?branch=main)](https://github.com/PerryLink/dsh-kit/actions)
 
-**One-command starter pack: 88 actively maintained PerryLink DeepSeek Harness plugins, plus 5 frozen ones kept installable — 93 npm specs, one command.**
+**One-command starter pack: 91 actively maintained PerryLink DeepSeek Harness plugins, plus 5 frozen ones kept installable — 96 npm specs, one command.**
 
 [dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus the rest of the family, across security, workflows, research, messaging bridges, and developer experience. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
 
@@ -32,7 +32,7 @@ dsh plugin --profile web add dsh-permission-rules    # allow/deny/ask rules
 dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 ```
 
-## What's inside (curated highlights — the installers cover 40 npm specs, plus 53 opt-in)
+## What's inside (curated highlights — the installers cover 43 npm specs, plus 53 opt-in)
 
 Two of the highlights below are **retired** and one is **frozen**. They all stay listed, and stay
 installable, because people already run them: 🧊 **FROZEN** means no new features and only a real breakage gets fixed, 🚫 **RETIRED**
@@ -94,8 +94,8 @@ Issues and feature requests: open them on the individual plugin repo, or discuss
 
 The family states its size in five repositories, and the numbers only look contradictory
 because each one counts a different set: 103 working copies, 99 of them non-private, 96 catalog
-entries, 96 roster entries, 93 install specs, 46 family-table rows, 42 and 34 in the default
-scope, 87 in the full one. Every row below is **derived, not typed**, and
+entries, 99 roster entries, 96 install specs, 46 family-table rows, 45 and 37 in the default
+scope, 91 in the full one. Every row below is **derived, not typed**, and
 `node scripts/check-parity.mjs` holds each one to `plugins.txt` (or to the file named in the last
 column) and fails if a sixth definition appears anywhere in a sibling README's family blurb.
 
@@ -103,19 +103,19 @@ column) and fails if a sixth definition appears anywhere in a sibling README's f
 |---|---|---|---|---|
 | Working copies | **103** | top-level directories carrying a `package.json`, both workspaces | 50 (`dsh/plugins`) + 53 (`dsh-plugins`) | measured; never quoted in prose |
 | Non-private packages | **99** | those 103 minus the `"private": true` ones | 103 − `dsh-catalog`, `dsh-plugin-certification`, `dsh-skill-pack-security`, `jevcore` | measured; never quoted in prose |
-| Install specs | **93** | one npm spec per non-comment line | 39 default + 54 `# opt-in` checkers | `plugins.txt` |
-| Default install | **39** | what a plain `install-all.sh <profile>` installs | 93 − 54 | `plugins.txt`; gated in this page's headline |
-| Active — full scope | **88** | install specs minus the frozen ones | 93 − 5 | this page's headline and its family blurb |
-| Active — default scope | **34** | default install minus the frozen ones | 39 − 5 | every per-plugin README's family blurb |
-| Roster — full scope | **96** | every roster member, retired included | 93 + 3 retired | this page's family blurb |
-| Roster — default scope | **42** | default install plus the retired members | 39 + 3 | every per-plugin README's family blurb |
+| Install specs | **96** | one npm spec per non-comment line | 42 default + 54 `# opt-in` checkers | `plugins.txt` |
+| Default install | **42** | what a plain `install-all.sh <profile>` installs | 96 − 54 | `plugins.txt`; gated in this page's headline |
+| Active — full scope | **91** | install specs minus the frozen ones | 96 − 5 | this page's headline and its family blurb |
+| Active — default scope | **37** | default install minus the frozen ones | 42 − 5 | every per-plugin README's family blurb |
+| Roster — full scope | **99** | every roster member, retired included | 96 + 3 retired | this page's family blurb |
+| Roster — default scope | **45** | default install plus the retired members | 42 + 3 | every per-plugin README's family blurb |
 | Family-table rows | **46** | rows a family table actually lists; retired rows are kept, never deleted | 42 plugin repos + `dsh-plugin-kit` + `dsh-catalog` + `dsh-plugin-certification` + `dsh-plugin-upgrade-015` | every README's family table |
-| Machine-readable roster | **95** entries | `dsh-plugin-kit/data/repos.json` | 94 with `role != "infra"` + the `dsh-plugin-kit` infra entry | `dsh-plugin-kit/data/repos.json` |
+| Machine-readable roster | **99** entries | `dsh-plugin-kit/data/repos.json` | 98 with `role != "infra"` + the `dsh-plugin-kit` infra entry | `dsh-plugin-kit/data/repos.json` |
 | Catalog entries | **96** | rows in the catalog's own table | 95 family repositories + the third-party `dsh-phocinae` | `dsh-catalog/data/packages.json` |
 
 **Exactly two scopes, and no third, may appear in a family blurb**: the default scope
 (34 active / 42 roster / 5 frozen / 3 retired — what the per-plugin READMEs state) and the full
-scope (87 / 95 / 5 / 3 — what this page states). `check-parity.mjs` rejects any other
+scope (91 / 99 / 5 / 3 — what this page states). `check-parity.mjs` rejects any other
 combination, which is how three READMEs still stating 33 active / 6 frozen were found on
 2026-10-13 — five days after `dsh-memento` was unfrozen and their tables stopped matching their
 own sentences.
@@ -133,7 +133,7 @@ Two consequences worth stating, because they are the two ways these numbers went
 
 ## PerryLink DSH Plugin Family
 
-This project is one of the **88 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **96**, of which **5** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
+This project is one of the **91 actively maintained** DeepSeek Harness plugins from [PerryLink](https://github.com/PerryLink) — the roster is **99**, of which **5** are frozen and **3** retired; every one keeps its row below, with the reason in the Status column. If this one helps you, the others likely will too:
 
 | Plugin | One-liner | Status |
 |---|---|---|
