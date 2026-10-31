@@ -90,13 +90,13 @@ dsh-warranty-calc  # opt-in
 # Third-party packages do not belong here at all, however friendly the
 # collaboration (dsh-wechat was listed until 2026-09-20; it is pan17's package).
 dsh-auto-review
-dsh-autotier
+dsh-autotier                      # 🧊 FROZEN — see the repo README
 dsh-budget                        # 🧊 FROZEN — see the repo README
-dsh-cert-mcp
+dsh-cert-mcp                      # 🧊 FROZEN — see the repo README
 dsh-checkpoint-rewind
 dsh-claude-move                   # 🧊 FROZEN — see the repo README
 dsh-click
-dsh-community-bench
+dsh-community-bench               # 🧊 FROZEN — see the repo README
 dsh-composer-history
 dsh-data-quality
 dsh-defend                        # 🧊 FROZEN — see the repo README
@@ -118,7 +118,7 @@ dsh-permission-rules
 dsh-phocinae
 dsh-phone-inbox
 dsh-plugin-guide
-dsh-plugin-upgrade
+dsh-plugin-upgrade                # corridors end at 0.1.6-alpha.2
 dsh-reach                         # 🧊 FROZEN — see the repo README
 dsh-research-report
 dsh-score
@@ -126,7 +126,7 @@ dsh-session-sync
 dsh-talk
 dsh-test-drive
 dsh-translate
-@perrylink/dsh-checkers-suite
+@perrylink/dsh-checkers            # current shim; @perrylink/dsh-checkers-suite is the deprecated alias
 @perrylink/dsh-github
 @perrylink/dsh-plugin-doctor
 @perrylink/dsh-plugin-kit
