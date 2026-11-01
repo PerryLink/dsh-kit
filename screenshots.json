@@ -1,0 +1,14 @@
+[
+  {
+    "path": "docs/assets/dsh-kit-hero.png",
+    "kind": "hero",
+    "alt": "dsh-kit parity counts",
+    "caption": "Real parity check: 92 specs, 87 active, 95 roster."
+  },
+  {
+    "path": "docs/assets/dsh-kit-demo.gif",
+    "kind": "demo",
+    "alt": "Animated dsh-kit terminal session",
+    "caption": "The same run, assembled line by line."
+  }
+]
