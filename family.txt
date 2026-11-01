@@ -1,9 +1,9 @@
 # Full-family install roster — 117 packages.
 # Generated from dsh-plugins/family.json installScope; do not hand-edit specs.
-# 40 mainline default + 53 mainline opt-in + 9 catalog-only + 15 domain plugins.
+# 39 mainline default + 53 mainline opt-in + 10 catalog-only + 15 domain plugins.
 # Excluded: 2 domain suites (their members are listed), 3 retired, 3 infrastructure.
 
-# ── mainline-default (40) ──
+# ── mainline-default (39) ──
 dsh-auto-review
 dsh-autotier
 dsh-budget
@@ -11,7 +11,6 @@ dsh-cert-mcp
 dsh-checkpoint-rewind
 dsh-claude-move
 dsh-click
-dsh-community-bench
 dsh-composer-history
 dsh-data-quality
 dsh-defend
@@ -100,9 +99,10 @@ dsh-tender-extract
 dsh-tender-matrix
 dsh-warranty-calc
 
-# ── catalog-only (9) ──
+# ── catalog-only (10) ──
 dsh-bid-health-check
 dsh-canteen-retention-check
+dsh-community-bench
 dsh-construction-doc-check
 dsh-excel-reconcile
 dsh-invoice-ledger

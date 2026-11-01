@@ -45,7 +45,7 @@ dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 .\install-family.ps1 -Profile web
 ```
 
-It reads `family.txt` (generated from `dsh-plugins/family.json`): **40 family mainline default + 53 core checkers + 9 catalog-only compliance tools + 15 domain plugins = 117**. It excludes the two domain suites (their members are listed), 3 retired packages and 3 support repositories. The exact scope table is [ROSTER.md](https://github.com/PerryLink/dsh-plugins/blob/main/ROSTER.md).
+It reads `family.txt` (generated from `dsh-plugins/family.json`): **39 mainline default + 53 core checkers + 10 catalog-only compliance tools + 15 domain plugins = 117**. It excludes the two domain suites (their members are listed), 3 retired packages and 3 support repositories. The exact scope table is [ROSTER.md](https://github.com/PerryLink/dsh-plugins/blob/main/ROSTER.md).
 
 ## What's inside (curated highlights — the installers cover 43 npm specs, plus 53 opt-in)
 
