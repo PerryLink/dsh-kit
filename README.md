@@ -33,7 +33,21 @@ dsh plugin --profile web add dsh-permission-rules    # allow/deny/ask rules
 dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 ```
 
-## What's inside (curated highlights — the installers cover 39 npm specs, plus 53 opt-in)
+## Full family install (117 packages)
+
+`install-all.sh` / `install-all.ps1` are the **mainline starter pack**: 43 default + 53 opt-in checkers. If you want every installable family package in one profile, use the separate family installer:
+
+```sh
+# Linux / macOS
+./install-family.sh web
+
+# Windows PowerShell
+.\install-family.ps1 -Profile web
+```
+
+It reads `family.txt` (generated from `dsh-plugins/family.json`): **40 family mainline default + 53 core checkers + 9 catalog-only compliance tools + 15 domain plugins = 117**. It excludes the two domain suites (their members are listed), 3 retired packages and 3 support repositories. The exact scope table is [ROSTER.md](https://github.com/PerryLink/dsh-plugins/blob/main/ROSTER.md).
+
+## What's inside (curated highlights — the installers cover 43 npm specs, plus 53 opt-in)
 
 Several highlights below are **retired** or **frozen**. They all stay listed, and stay
 installable, because people already run them: 🧊 **FROZEN** means no new features and only a real breakage gets fixed, 🚫 **RETIRED**

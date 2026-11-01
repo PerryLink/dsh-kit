@@ -15,7 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: bash -n
-        run: bash -n install-all.sh
+        run: |
+          bash -n install-all.sh
+          bash -n install-family.sh
 
   syntax-ps1:
     name: install-all.ps1 syntax
@@ -28,6 +30,7 @@ jobs:
           $tokens = $null
           $errors = $null
           [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'install-all.ps1'), [ref]$tokens, [ref]$errors)
+          [void][System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'install-family.ps1'), [ref]$tokens, [ref]$errors)
           if ($errors -and $errors.Count -gt 0) {
             $errors | ForEach-Object { Write-Error $_ }
             exit 1
@@ -44,6 +47,8 @@ jobs:
           node-version: 22
       - name: Compare the two installers
         run: node scripts/check-parity.mjs
+      - name: Validate the 117-package family roster
+        run: node scripts/check-family.mjs
 
   links:
     name: README links resolve
