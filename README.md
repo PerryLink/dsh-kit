@@ -33,23 +33,9 @@ dsh plugin --profile web add dsh-permission-rules    # allow/deny/ask rules
 dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 ```
 
-## Full family install (117 packages)
+## What's inside (curated highlights — the installers cover 39 npm specs, plus 53 opt-in)
 
-`install-all.sh` / `install-all.ps1` are the **mainline starter pack**: 43 default + 53 opt-in checkers. If you want every installable family package in one profile, use the separate family installer:
-
-```sh
-# Linux / macOS
-./install-family.sh web
-
-# Windows PowerShell
-.\install-family.ps1 -Profile web
-```
-
-It reads `family.txt` (generated from `dsh-plugins/family.json`): **39 mainline default + 53 core checkers + 10 catalog-only compliance tools + 15 domain plugins = 117**. It excludes the two domain suites (their members are listed), 3 retired packages and 3 support repositories. The exact scope table is [ROSTER.md](https://github.com/PerryLink/dsh-plugins/blob/main/ROSTER.md).
-
-## What's inside (curated highlights — the installers cover 43 npm specs, plus 53 opt-in)
-
-Several highlights below are **retired** or **frozen**. They all stay listed, and stay
+Two of the highlights below are **retired** and one is **frozen**. They all stay listed, and stay
 installable, because people already run them: 🧊 **FROZEN** means no new features and only a real breakage gets fixed, 🚫 **RETIRED**
 means the host now does this natively and the package is npm-deprecated — retired packages are **not** in
 `plugins.txt`, so a fresh install never pulls them in.
@@ -77,8 +63,8 @@ means the host now does this natively and the package is npm-deprecated — reti
 |---|---|
 | [dsh-mcp-panel](https://github.com/PerryLink/dsh-mcp-panel) | Read-only MCP runtime panel: `/mcp` + Settings tab |
 | [dsh-lsp-actions](https://github.com/PerryLink/dsh-lsp-actions) | LSP diagnostics, formatting, completion, code actions, rename |
-| [dsh-github](https://github.com/PerryLink/dsh-github) | GitHub PR/issue integration; every write gated by human approval |
-| [dsh-skill-pack-security](https://github.com/PerryLink/dsh-skill-pack-security) | Security-audit skill pack: secret scan, dependency and supply-chain review |
+| [dsh-github-bot](https://github.com/PerryLink/dsh-github-bot) | GitHub PR/issue integration; every write gated by human approval |
+| [dsh-security-pack](https://github.com/PerryLink/dsh-security-pack) | Security-audit skill pack: secret scan, dependency and supply-chain review |
 
 ### UX & migration
 
@@ -86,7 +72,7 @@ means the host now does this natively and the package is npm-deprecated — reti
 |---|---|---|
 | [dsh-session-pin](https://github.com/PerryLink/dsh-session-pin) | Pin sessions in the Web sidebar with durable ordering | 🚫 **RETIRED** — the host ships session pinning natively |
 | [dsh-composer-history](https://github.com/PerryLink/dsh-composer-history) | Terminal-style input history for the web composer: arrows, Ctrl+R | |
-| [dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide) | Plugin-development knowledge base as an on-demand agent skill | |
+| [dsh-primer](https://github.com/PerryLink/dsh-primer) | Plugin-development knowledge base as an on-demand agent skill | |
 | [dsh-claude-move](https://github.com/PerryLink/dsh-claude-move) | Migrate Claude Code sessions, memory, skills and CLAUDE.md into DSH | 🧊 FROZEN — see the repo README |
 
 ## Notes
@@ -94,12 +80,11 @@ means the host now does this natively and the package is npm-deprecated — reti
 - The installed set is [`plugins.txt`](plugins.txt) — one npm spec per line, and the only place the roster is written down. Both installers read it, and `node scripts/check-parity.mjs` holds them and every count on this page to it.
 - **Retired packages are not in `plugins.txt`**, so a fresh install never pulls one in, and the gate fails if one is added back. The five retired names, and why, are listed in the file's own header comment.
 - **Frozen packages are in `plugins.txt`** and are installed; a trailing `# 🧊 FROZEN` comment on their line marks them, and both installers strip that comment before calling `dsh plugin add`.
-- The 2026-10-31 batch also freezes seven S1 demos (`dsh-docx-redline`, `dsh-freight-audit`, `dsh-ghg`, `dsh-hs-candidate`, `dsh-ifc-qto`, `dsh-pim-lint`, `dsh-qms-capa`); they are not in `plugins.txt`, and their own READMEs carry the banner.
 - Install scripts are **idempotent** — safe to re-run.
-- `dsh-skill-pack-security` installs from its published provider package (`@perrylink/dsh-skill-pack-security-provider`); everything else installs from npm.
+- `dsh-security-pack` installs from npm.
 - Versions track the latest npm releases; pin a specific version per plugin if you need reproducibility.
 - **Monthly download baseline:** `node scripts/npm-downloads-snapshot.mjs` reads this file's own roster and appends every spec's week and month npm downloads to `data/npm-downloads-snapshots.json`, so a distribution change can be measured against a previous month instead of asserted. It writes only that series — the profile page's download figure stays where it is. See [`scripts/README-npm-downloads-snapshot.md`](scripts/README-npm-downloads-snapshot.md).
-- Deprecated names are not installed: `dsh-background-agents`, `dsh-session-pin` and `dsh-team-rooms` (the host implements all three natively now), and `dsh-plugin-upgrade-015` plus its earlier name `dsh-plugin-upgrade-rc1` (superseded by `dsh-plugin-upgrade`, which carries every corridor in one package). They stay on npm for anyone who already installed them.
+- Deprecated names are not installed: `dsh-background-agents`, `dsh-session-pin` and `dsh-team-rooms` (the host implements all three natively now), and `dsh-plugin-upgrade-015` plus its earlier name `dsh-plugin-upgrade-rc1` (superseded by `dsh-codemod`, which carries every corridor in one package). They stay on npm for anyone who already installed them.
 - License: Apache-2.0 (matching the plugin family).
 
 ## Feedback
@@ -119,10 +104,10 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-aqua-input-check](https://github.com/PerryLink/dsh-aqua-input-check)** |  |
 | **[dsh-archive-check](https://github.com/PerryLink/dsh-archive-check)** |  |
 | **[dsh-auto-review](https://github.com/PerryLink/dsh-auto-review)** |  |
-| **[dsh-autotier](https://github.com/PerryLink/dsh-autotier)** | 🧊 FROZEN — see the repo README |
+| **[dsh-autotier](https://github.com/PerryLink/dsh-autotier)** |  |
 | **[dsh-bid-ca-precheck](https://github.com/PerryLink/dsh-bid-ca-precheck)** |  |
 | **[dsh-bid-qual-check](https://github.com/PerryLink/dsh-bid-qual-check)** |  |
-| **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** | 🧊 FROZEN — see the repo README |
+| **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** |  |
 | **[dsh-checkpoint-rewind](https://github.com/PerryLink/dsh-checkpoint-rewind)** |  |
 | **[dsh-click](https://github.com/PerryLink/dsh-click)** |  |
 | **[dsh-composer-history](https://github.com/PerryLink/dsh-composer-history)** |  |
@@ -141,7 +126,7 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-fmea-table-check](https://github.com/PerryLink/dsh-fmea-table-check)** |  |
 | **[dsh-forecast-penalty](https://github.com/PerryLink/dsh-forecast-penalty)** |  |
 | **[dsh-fund-research](https://github.com/PerryLink/dsh-fund-research)** |  |
-| **[dsh-github](https://github.com/PerryLink/dsh-github)** |  |
+| **[dsh-github-bot](https://github.com/PerryLink/dsh-github-bot)** |  |
 | **[dsh-gongwen-flow-check](https://github.com/PerryLink/dsh-gongwen-flow-check)** |  |
 | **[dsh-gongwen-word-check](https://github.com/PerryLink/dsh-gongwen-word-check)** |  |
 | **[dsh-guard-plan-qc](https://github.com/PerryLink/dsh-guard-plan-qc)** |  |
@@ -173,10 +158,10 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-permit-report-check](https://github.com/PerryLink/dsh-permit-report-check)** |  |
 | **[dsh-pipeline-check](https://github.com/PerryLink/dsh-pipeline-check)** |  |
 | **[dsh-pleading-draft](https://github.com/PerryLink/dsh-pleading-draft)** |  |
-| **[dsh-plugin-doctor](https://github.com/PerryLink/dsh-plugin-doctor)** |  |
-| **[dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide)** |  |
-| **[dsh-plugin-kit](https://github.com/PerryLink/dsh-plugin-kit)** |  |
-| **[dsh-plugin-upgrade](https://github.com/PerryLink/dsh-plugin-upgrade)** |  |
+| **[dsh-clinic](https://github.com/PerryLink/dsh-clinic)** |  |
+| **[dsh-primer](https://github.com/PerryLink/dsh-primer)** |  |
+| **[dsh-scaffold](https://github.com/PerryLink/dsh-scaffold)** |  |
+| **[dsh-codemod](https://github.com/PerryLink/dsh-codemod)** |  |
 | **[dsh-policy-brief-draft](https://github.com/PerryLink/dsh-policy-brief-draft)** |  |
 | **[dsh-power-loss-split](https://github.com/PerryLink/dsh-power-loss-split)** |  |
 | **[dsh-power-ticket-check](https://github.com/PerryLink/dsh-power-ticket-check)** |  |
@@ -191,7 +176,7 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-score](https://github.com/PerryLink/dsh-score)** |  |
 | **[dsh-session-sync](https://github.com/PerryLink/dsh-session-sync)** |  |
 | **[dsh-site-log-check](https://github.com/PerryLink/dsh-site-log-check)** |  |
-| **[dsh-skill-pack-security](https://github.com/PerryLink/dsh-skill-pack-security)** |  |
+| **[dsh-security-pack](https://github.com/PerryLink/dsh-security-pack)** |  |
 | **[dsh-soe-decision-check](https://github.com/PerryLink/dsh-soe-decision-check)** |  |
 | **[dsh-soilwater-check](https://github.com/PerryLink/dsh-soilwater-check)** |  |
 | **[dsh-sop-sync-check](https://github.com/PerryLink/dsh-sop-sync-check)** |  |
@@ -200,14 +185,13 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-tender-extract](https://github.com/PerryLink/dsh-tender-extract)** |  |
 | **[dsh-tender-matrix](https://github.com/PerryLink/dsh-tender-matrix)** |  |
 | **[dsh-test-drive](https://github.com/PerryLink/dsh-test-drive)** |  |
-| **[dsh-ticktick](https://github.com/PerryLink/dsh-ticktick)** |  |
+| **[dsh-dida](https://github.com/PerryLink/dsh-dida)** |  |
 | **[dsh-translate](https://github.com/PerryLink/dsh-translate)** |  |
 | **[dsh-warranty-calc](https://github.com/PerryLink/dsh-warranty-calc)** |  |
 | **[dsh-catalog](https://github.com/PerryLink/dsh-catalog)** |  |
 | **[dsh-plugin-certification](https://github.com/PerryLink/dsh-plugin-certification)** |  |
 | **[dsh-plugin-portal](https://github.com/PerryLink/dsh-plugin-portal)** |  |
 | **[dsh-budget](https://github.com/PerryLink/dsh-budget)** | 🧊 FROZEN — see the repo README |
-| **[dsh-community-bench](https://github.com/PerryLink/dsh-community-bench)** | 🧊 FROZEN — see the repo README |
 | **[dsh-claude-move](https://github.com/PerryLink/dsh-claude-move)** | 🧊 FROZEN — see the repo README |
 | **[dsh-defend](https://github.com/PerryLink/dsh-defend)** | 🧊 FROZEN — see the repo README |
 | **[dsh-draw](https://github.com/PerryLink/dsh-draw)** | 🧊 FROZEN — see the repo README |
