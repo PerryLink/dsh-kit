@@ -92,7 +92,7 @@ for (const spec of roster) {
   }
 }
 // ...and the frozen set is exactly the five the family documents.
-const FROZEN_REPOS = ['dsh-budget', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend']
+const FROZEN_REPOS = ['dsh-budget', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend', 'dsh-autotier', 'dsh-cert-mcp', 'dsh-community-bench']
 const frozenRepos = frozen.map(repoOf).sort()
 if (frozenRepos.join(',') !== [...FROZEN_REPOS].sort().join(',')) {
   failures.push(`plugins.txt marks ${frozenRepos.length} frozen package(s) [${frozenRepos.join(', ')}], expected the ${FROZEN_REPOS.length}: ${FROZEN_REPOS.join(', ')}`)

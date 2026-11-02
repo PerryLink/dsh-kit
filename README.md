@@ -104,13 +104,13 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-aqua-input-check](https://github.com/PerryLink/dsh-aqua-input-check)** |  |
 | **[dsh-archive-check](https://github.com/PerryLink/dsh-archive-check)** |  |
 | **[dsh-auto-review](https://github.com/PerryLink/dsh-auto-review)** |  |
-| **[dsh-autotier](https://github.com/PerryLink/dsh-autotier)** |  |
+| **[dsh-autotier](https://github.com/PerryLink/dsh-autotier)** | 🧊 FROZEN — see the repo README |
 | **[dsh-bid-ca-precheck](https://github.com/PerryLink/dsh-bid-ca-precheck)** |  |
 | **[dsh-bid-qual-check](https://github.com/PerryLink/dsh-bid-qual-check)** |  |
-| **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** |  |
+| **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** | 🧊 FROZEN — see the repo README |
 | **[dsh-checkpoint-rewind](https://github.com/PerryLink/dsh-checkpoint-rewind)** |  |
 | **[dsh-click](https://github.com/PerryLink/dsh-click)** |  |
-| **[dsh-community-bench](https://github.com/PerryLink/dsh-community-bench)** |  |
+| **[dsh-community-bench](https://github.com/PerryLink/dsh-community-bench)** | 🧊 FROZEN — see the repo README |
 | **[dsh-composer-history](https://github.com/PerryLink/dsh-composer-history)** |  |
 | **[dsh-contract-stance](https://github.com/PerryLink/dsh-contract-stance)** |  |
 | **[dsh-customs-doc-check](https://github.com/PerryLink/dsh-customs-doc-check)** |  |
