@@ -110,6 +110,7 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** |  |
 | **[dsh-checkpoint-rewind](https://github.com/PerryLink/dsh-checkpoint-rewind)** |  |
 | **[dsh-click](https://github.com/PerryLink/dsh-click)** |  |
+| **[dsh-community-bench](https://github.com/PerryLink/dsh-community-bench)** |  |
 | **[dsh-composer-history](https://github.com/PerryLink/dsh-composer-history)** |  |
 | **[dsh-contract-stance](https://github.com/PerryLink/dsh-contract-stance)** |  |
 | **[dsh-customs-doc-check](https://github.com/PerryLink/dsh-customs-doc-check)** |  |

@@ -92,7 +92,7 @@ for (const spec of roster) {
   }
 }
 // ...and the frozen set is exactly the five the family documents.
-const FROZEN_REPOS = ['dsh-budget', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend', 'dsh-autotier', 'dsh-cert-mcp', 'dsh-community-bench']
+const FROZEN_REPOS = ['dsh-budget', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend']
 const frozenRepos = frozen.map(repoOf).sort()
 if (frozenRepos.join(',') !== [...FROZEN_REPOS].sort().join(',')) {
   failures.push(`plugins.txt marks ${frozenRepos.length} frozen package(s) [${frozenRepos.join(', ')}], expected the ${FROZEN_REPOS.length}: ${FROZEN_REPOS.join(', ')}`)
@@ -167,7 +167,7 @@ for (const slug of tableSlugs) {
   if (tableSlugs.filter((s) => s === slug).length > 1) failures.push(`README.md family table lists ${slug} twice`)
 }
 const tableRepos = new Set(tableSlugs.map((slug) => slug.split('/')[1]))
-if (!tableRepos.has('dsh-plugin-upgrade')) failures.push('README.md family table must carry dsh-plugin-upgrade (the retired -015 row is not a substitute)')
+if (!tableRepos.has('dsh-codemod')) failures.push('README.md family table must carry dsh-codemod (the retired -015 row is not a substitute)')
 if (tableRepos.has('dsh-wechat')) failures.push('README.md family table still carries dsh-wechat, which is not a PerryLink package')
 for (const resource of RESOURCES) {
   if (!tableRepos.has(resource)) failures.push(`README.md family table dropped the ecosystem repository ${resource}`)
