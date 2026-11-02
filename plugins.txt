@@ -79,10 +79,10 @@ dsh-warranty-calc  # opt-in
 #   dsh-background-agents    the host ships native continuable subagents
 #   dsh-session-pin          the host ships session pinning natively
 #   dsh-team-rooms           the host ships the Agent Teams subsystem
-#   dsh-plugin-upgrade-015   superseded by dsh-plugin-upgrade, which carries
+#   dsh-plugin-upgrade-015   superseded by dsh-codemod, which carries
 #                            every corridor in one package
 #   dsh-plugin-upgrade-016   never published; folded into dsh-plugin-upgrade
-#   dsh-plugin-upgrade-rc1   superseded by dsh-plugin-upgrade 2.0.0, which
+#   dsh-plugin-upgrade-rc1   superseded by dsh-codemod 2.0.0, which
 #                            carries its 0.1.3-alpha.1 -> 0.1.5-rc.1 corridor
 #                            (retired 2026-10-05; missing from this list and
 #                            from RETIRED.corridor until 2026-10-08)
@@ -117,8 +117,8 @@ dsh-output-styles
 dsh-permission-rules
 dsh-phocinae
 dsh-phone-inbox
-dsh-plugin-guide
-dsh-plugin-upgrade                # corridors end at 0.1.6-alpha.2
+dsh-primer
+dsh-codemod                # corridors end at 0.1.6-alpha.2
 dsh-reach                         # 🧊 FROZEN — see the repo README
 dsh-research-report
 dsh-score
@@ -126,9 +126,9 @@ dsh-session-sync
 dsh-talk
 dsh-test-drive
 dsh-translate
-@perrylink/dsh-checkers            # current shim; @perrylink/dsh-checkers-suite is the deprecated alias
-@perrylink/dsh-github
-@perrylink/dsh-plugin-doctor
-@perrylink/dsh-plugin-kit
-@perrylink/dsh-skill-pack-security-provider
-@perrylink/dsh-ticktick
+dsh-check-pack
+dsh-github-bot
+dsh-clinic
+dsh-scaffold
+dsh-security-pack
+dsh-dida
