@@ -1,0 +1,36 @@
+# Domain roster — opt-in, NOT part of the default install
+#
+# The mainline roster lives in plugins.txt (96 specs). These 24 domain packages
+# are published, catalog-listed and not retired, but they are deliberately
+# opt-in: install-all.sh/ps1 only read plugins.txt, so a default install stays
+# at 96. Add them explicitly with `install-all.sh --domain` (or by spec).
+#
+# Source: 00-live/study-2026-11-02/ROSTER-RECONCILE.md §B (2026-11-03).
+# Status comes from the same table: 17 active, 7 frozen.
+# Regenerate the counts with scripts/check-parity.mjs (it only reads plugins.txt,
+# so this file must not change the mainline numbers).
+
+dsh-ap-three-way
+dsh-bankrec
+dsh-bid-health-check
+dsh-canteen-retention-check
+dsh-construction-doc-check
+dsh-contract-suite
+dsh-docx-redline  # FROZEN — see the repo README
+dsh-einvoice
+dsh-excel-reconcile
+dsh-finops-suite
+dsh-freight-audit  # FROZEN — see the repo README
+dsh-ghg  # FROZEN — see the repo README
+dsh-hs-candidate  # FROZEN — see the repo README
+dsh-ifc-qto  # FROZEN — see the repo README
+dsh-invoice-ledger
+dsh-legal-clause
+dsh-legal-intake
+dsh-payroll-audit
+dsh-pim-lint  # FROZEN — see the repo README
+dsh-qms-capa  # FROZEN — see the repo README
+dsh-safety-ledger-check
+dsh-table-ingest
+dsh-tender-requirements
+dsh-travel-recon
