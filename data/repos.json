@@ -1,0 +1,798 @@
+{
+  "updatedAt": "2026-11-04",
+  "note": "Registry of the @perrylink dsh plugin ecosystem (99 plugin repos + this kit). Star counts re-read on 2026-10-19; `status` re-derived on 2026-10-31. `status` is the maintenance state: active, frozen (no new features, only real breakages fixed), retired (npm-deprecated). The roster rule is the same one plugins.txt uses: `dsh.bundle.patch` declared, published, and not retired.",
+  "repos": [
+    {
+      "name": "dsh-scaffold",
+      "github": "https://github.com/PerryLink/dsh-scaffold",
+      "group": "基建",
+      "role": "infra",
+      "star": 1,
+      "status": "active"
+    },
+    {
+      "name": "dsh-check-pack",
+      "github": "https://github.com/PerryLink/dsh-check-pack",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-community-bench",
+      "github": "https://github.com/PerryLink/dsh-community-bench",
+      "group": "生态",
+      "role": "plugin",
+      "star": 0,
+      "status": "frozen"
+    },
+    {
+      "name": "dsh-memento",
+      "github": "https://github.com/PerryLink/dsh-memento",
+      "group": "会话",
+      "role": "plugin",
+      "star": 139,
+      "status": "active"
+    },
+    {
+      "name": "dsh-checkpoint-rewind",
+      "github": "https://github.com/PerryLink/dsh-checkpoint-rewind",
+      "group": "会话",
+      "role": "plugin",
+      "star": 22,
+      "status": "active"
+    },
+    {
+      "name": "dsh-composer-history",
+      "github": "https://github.com/PerryLink/dsh-composer-history",
+      "group": "会话",
+      "role": "plugin",
+      "star": 17,
+      "status": "active"
+    },
+    {
+      "name": "dsh-background-agents",
+      "github": "https://github.com/PerryLink/dsh-background-agents",
+      "group": "会话",
+      "role": "plugin",
+      "star": 19,
+      "status": "retired"
+    },
+    {
+      "name": "dsh-phocinae",
+      "github": "https://github.com/PerryLink/dsh-phocinae",
+      "group": "研究",
+      "role": "plugin",
+      "star": 1,
+      "status": "active"
+    },
+    {
+      "name": "dsh-phone-inbox",
+      "github": "https://github.com/PerryLink/dsh-phone-inbox",
+      "group": "集成",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-session-pin",
+      "github": "https://github.com/PerryLink/dsh-session-pin",
+      "group": "会话",
+      "role": "plugin",
+      "star": 11,
+      "status": "retired"
+    },
+    {
+      "name": "dsh-session-sync",
+      "github": "https://github.com/PerryLink/dsh-session-sync",
+      "group": "会话",
+      "role": "plugin",
+      "star": 18,
+      "status": "active"
+    },
+    {
+      "name": "dsh-auto-review",
+      "github": "https://github.com/PerryLink/dsh-auto-review",
+      "group": "安全",
+      "role": "plugin",
+      "star": 234,
+      "status": "active"
+    },
+    {
+      "name": "dsh-permission-rules",
+      "github": "https://github.com/PerryLink/dsh-permission-rules",
+      "group": "安全",
+      "role": "plugin",
+      "star": 120,
+      "status": "active"
+    },
+    {
+      "name": "dsh-defend",
+      "github": "https://github.com/PerryLink/dsh-defend",
+      "group": "安全",
+      "role": "plugin",
+      "star": 23,
+      "status": "frozen"
+    },
+    {
+      "name": "dsh-mask",
+      "github": "https://github.com/PerryLink/dsh-mask",
+      "group": "安全",
+      "role": "plugin",
+      "star": 13,
+      "status": "active"
+    },
+    {
+      "name": "dsh-security-pack",
+      "github": "https://github.com/PerryLink/dsh-security-pack",
+      "group": "安全",
+      "role": "plugin",
+      "star": 19,
+      "status": "active"
+    },
+    {
+      "name": "dsh-doublecheck",
+      "github": "https://github.com/PerryLink/dsh-doublecheck",
+      "group": "质量",
+      "role": "plugin",
+      "star": 55,
+      "status": "active"
+    },
+    {
+      "name": "dsh-data-quality",
+      "github": "https://github.com/PerryLink/dsh-data-quality",
+      "group": "质量",
+      "role": "plugin",
+      "star": 52,
+      "status": "active"
+    },
+    {
+      "name": "dsh-test-drive",
+      "github": "https://github.com/PerryLink/dsh-test-drive",
+      "group": "质量",
+      "role": "plugin",
+      "star": 12,
+      "status": "active"
+    },
+    {
+      "name": "dsh-score",
+      "github": "https://github.com/PerryLink/dsh-score",
+      "group": "质量",
+      "role": "plugin",
+      "star": 12,
+      "status": "active"
+    },
+    {
+      "name": "dsh-industry-research",
+      "github": "https://github.com/PerryLink/dsh-industry-research",
+      "group": "研究",
+      "role": "plugin",
+      "star": 213,
+      "status": "active"
+    },
+    {
+      "name": "dsh-fund-research",
+      "github": "https://github.com/PerryLink/dsh-fund-research",
+      "group": "研究",
+      "role": "plugin",
+      "star": 68,
+      "status": "active"
+    },
+    {
+      "name": "dsh-research-report",
+      "github": "https://github.com/PerryLink/dsh-research-report",
+      "group": "研究",
+      "role": "plugin",
+      "star": 214,
+      "status": "active"
+    },
+    {
+      "name": "dsh-library",
+      "github": "https://github.com/PerryLink/dsh-library",
+      "group": "研究",
+      "role": "plugin",
+      "star": 18,
+      "status": "active"
+    },
+    {
+      "name": "dsh-mcp-panel",
+      "github": "https://github.com/PerryLink/dsh-mcp-panel",
+      "group": "集成",
+      "role": "plugin",
+      "star": 73,
+      "status": "active"
+    },
+    {
+      "name": "dsh-claude-move",
+      "github": "https://github.com/PerryLink/dsh-claude-move",
+      "group": "集成",
+      "role": "plugin",
+      "star": 27,
+      "status": "frozen"
+    },
+    {
+      "name": "dsh-lsp-actions",
+      "github": "https://github.com/PerryLink/dsh-lsp-actions",
+      "group": "集成",
+      "role": "plugin",
+      "star": 26,
+      "status": "active"
+    },
+    {
+      "name": "dsh-local-ai",
+      "github": "https://github.com/PerryLink/dsh-local-ai",
+      "group": "集成",
+      "role": "plugin",
+      "star": 17,
+      "status": "active"
+    },
+    {
+      "name": "dsh-github-bot",
+      "github": "https://github.com/PerryLink/dsh-github-bot",
+      "group": "集成",
+      "role": "plugin",
+      "star": 23,
+      "status": "active"
+    },
+    {
+      "name": "dsh-translate",
+      "github": "https://github.com/PerryLink/dsh-translate",
+      "group": "集成",
+      "role": "plugin",
+      "star": 14,
+      "status": "active"
+    },
+    {
+      "name": "dsh-click",
+      "github": "https://github.com/PerryLink/dsh-click",
+      "group": "桌面",
+      "role": "plugin",
+      "star": 16,
+      "status": "active"
+    },
+    {
+      "name": "dsh-talk",
+      "github": "https://github.com/PerryLink/dsh-talk",
+      "group": "桌面",
+      "role": "plugin",
+      "star": 17,
+      "status": "active"
+    },
+    {
+      "name": "dsh-draw",
+      "github": "https://github.com/PerryLink/dsh-draw",
+      "group": "桌面",
+      "role": "plugin",
+      "star": 10,
+      "status": "frozen"
+    },
+    {
+      "name": "dsh-budget",
+      "github": "https://github.com/PerryLink/dsh-budget",
+      "group": "观测",
+      "role": "plugin",
+      "star": 10,
+      "status": "frozen"
+    },
+    {
+      "name": "dsh-observe",
+      "github": "https://github.com/PerryLink/dsh-observe",
+      "group": "观测",
+      "role": "plugin",
+      "star": 13,
+      "status": "active"
+    },
+    {
+      "name": "dsh-fast",
+      "github": "https://github.com/PerryLink/dsh-fast",
+      "group": "观测",
+      "role": "plugin",
+      "star": 8,
+      "status": "active"
+    },
+    {
+      "name": "dsh-output-styles",
+      "github": "https://github.com/PerryLink/dsh-output-styles",
+      "group": "UX",
+      "role": "plugin",
+      "star": 13,
+      "status": "active"
+    },
+    {
+      "name": "dsh-primer",
+      "github": "https://github.com/PerryLink/dsh-primer",
+      "group": "生态",
+      "role": "plugin",
+      "star": 46,
+      "status": "active"
+    },
+    {
+      "name": "dsh-autotier",
+      "github": "https://github.com/PerryLink/dsh-autotier",
+      "group": "集成",
+      "role": "plugin",
+      "star": 1,
+      "status": "frozen"
+    },
+    {
+      "name": "dsh-cert-mcp",
+      "github": "https://github.com/PerryLink/dsh-cert-mcp",
+      "group": "生态",
+      "role": "plugin",
+      "star": 0,
+      "status": "frozen"
+    },
+    {
+      "name": "dsh-laya",
+      "github": "https://github.com/PerryLink/dsh-laya",
+      "group": "集成",
+      "role": "plugin",
+      "star": 6,
+      "status": "active"
+    },
+    {
+      "name": "dsh-clinic",
+      "github": "https://github.com/PerryLink/dsh-clinic",
+      "group": "生态",
+      "role": "plugin",
+      "star": 4,
+      "status": "active"
+    },
+    {
+      "name": "dsh-codemod",
+      "github": "https://github.com/PerryLink/dsh-codemod",
+      "group": "生态",
+      "role": "plugin",
+      "star": 2,
+      "status": "active"
+    },
+    {
+      "name": "dsh-reach",
+      "github": "https://github.com/PerryLink/dsh-reach",
+      "group": "集成",
+      "role": "plugin",
+      "star": 2,
+      "status": "frozen"
+    },
+    {
+      "name": "dsh-team-rooms",
+      "github": "https://github.com/PerryLink/dsh-team-rooms",
+      "group": "会话",
+      "role": "plugin",
+      "star": 3,
+      "status": "retired"
+    },
+    {
+      "name": "dsh-dida",
+      "github": "https://github.com/PerryLink/dsh-dida",
+      "group": "集成",
+      "role": "plugin",
+      "star": 3,
+      "status": "active"
+    },
+    {
+      "name": "dsh-aqua-input-check",
+      "github": "https://github.com/PerryLink/dsh-aqua-input-check",
+      "group": "安全",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-archive-check",
+      "github": "https://github.com/PerryLink/dsh-archive-check",
+      "group": "公文",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-bid-ca-precheck",
+      "github": "https://github.com/PerryLink/dsh-bid-ca-precheck",
+      "group": "招投标",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-bid-qual-check",
+      "github": "https://github.com/PerryLink/dsh-bid-qual-check",
+      "group": "招投标",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-contract-stance",
+      "github": "https://github.com/PerryLink/dsh-contract-stance",
+      "group": "招投标",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-customs-doc-check",
+      "github": "https://github.com/PerryLink/dsh-customs-doc-check",
+      "group": "外贸",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-demurrage-ledger",
+      "github": "https://github.com/PerryLink/dsh-demurrage-ledger",
+      "group": "外贸",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-drill-script-check",
+      "github": "https://github.com/PerryLink/dsh-drill-script-check",
+      "group": "安全",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-eia-guide-check",
+      "github": "https://github.com/PerryLink/dsh-eia-guide-check",
+      "group": "工程建设",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-emergency-plan",
+      "github": "https://github.com/PerryLink/dsh-emergency-plan",
+      "group": "安全",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-essay-rubric-check",
+      "github": "https://github.com/PerryLink/dsh-essay-rubric-check",
+      "group": "研究",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-evidence-check",
+      "github": "https://github.com/PerryLink/dsh-evidence-check",
+      "group": "法律",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-export-ctl-check",
+      "github": "https://github.com/PerryLink/dsh-export-ctl-check",
+      "group": "外贸",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-fmea-table-check",
+      "github": "https://github.com/PerryLink/dsh-fmea-table-check",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-forecast-penalty",
+      "github": "https://github.com/PerryLink/dsh-forecast-penalty",
+      "group": "外贸",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-gongwen-flow-check",
+      "github": "https://github.com/PerryLink/dsh-gongwen-flow-check",
+      "group": "公文",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-gongwen-word-check",
+      "github": "https://github.com/PerryLink/dsh-gongwen-word-check",
+      "group": "公文",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-guard-plan-qc",
+      "github": "https://github.com/PerryLink/dsh-guard-plan-qc",
+      "group": "工程建设",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-hazchem-check",
+      "github": "https://github.com/PerryLink/dsh-hazchem-check",
+      "group": "安全",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-hazplan-check",
+      "github": "https://github.com/PerryLink/dsh-hazplan-check",
+      "group": "工程建设",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-hidden-risk-map",
+      "github": "https://github.com/PerryLink/dsh-hidden-risk-map",
+      "group": "安全",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-hs-classify",
+      "github": "https://github.com/PerryLink/dsh-hs-classify",
+      "group": "外贸",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-icd-rule-check",
+      "github": "https://github.com/PerryLink/dsh-icd-rule-check",
+      "group": "医疗",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-lawcite-adapter",
+      "github": "https://github.com/PerryLink/dsh-lawcite-adapter",
+      "group": "法律",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-lc-doc-check",
+      "github": "https://github.com/PerryLink/dsh-lc-doc-check",
+      "group": "外贸",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-learning-gap-check",
+      "github": "https://github.com/PerryLink/dsh-learning-gap-check",
+      "group": "研究",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-medrec-qc",
+      "github": "https://github.com/PerryLink/dsh-medrec-qc",
+      "group": "医疗",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-nsfc-form-check",
+      "github": "https://github.com/PerryLink/dsh-nsfc-form-check",
+      "group": "研究",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-nurse-record-check",
+      "github": "https://github.com/PerryLink/dsh-nurse-record-check",
+      "group": "医疗",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-origin-rvc-check",
+      "github": "https://github.com/PerryLink/dsh-origin-rvc-check",
+      "group": "外贸",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-ota-review-check",
+      "github": "https://github.com/PerryLink/dsh-ota-review-check",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-paper-doc-adapter",
+      "github": "https://github.com/PerryLink/dsh-paper-doc-adapter",
+      "group": "研究",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-permit-report-check",
+      "github": "https://github.com/PerryLink/dsh-permit-report-check",
+      "group": "工程建设",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-pipeline-check",
+      "github": "https://github.com/PerryLink/dsh-pipeline-check",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-pleading-draft",
+      "github": "https://github.com/PerryLink/dsh-pleading-draft",
+      "group": "法律",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-policy-brief-draft",
+      "github": "https://github.com/PerryLink/dsh-policy-brief-draft",
+      "group": "研究",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-power-loss-split",
+      "github": "https://github.com/PerryLink/dsh-power-loss-split",
+      "group": "安全",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-power-ticket-check",
+      "github": "https://github.com/PerryLink/dsh-power-ticket-check",
+      "group": "安全",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-ppap-check",
+      "github": "https://github.com/PerryLink/dsh-ppap-check",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-protest-deadline",
+      "github": "https://github.com/PerryLink/dsh-protest-deadline",
+      "group": "招投标",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-railway-window",
+      "github": "https://github.com/PerryLink/dsh-railway-window",
+      "group": "外贸",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-repair-order-qc",
+      "github": "https://github.com/PerryLink/dsh-repair-order-qc",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-review-reply-check",
+      "github": "https://github.com/PerryLink/dsh-review-reply-check",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-rulefile-check",
+      "github": "https://github.com/PerryLink/dsh-rulefile-check",
+      "group": "招投标",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-safety-brief-check",
+      "github": "https://github.com/PerryLink/dsh-safety-brief-check",
+      "group": "工程建设",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-site-log-check",
+      "github": "https://github.com/PerryLink/dsh-site-log-check",
+      "group": "工程建设",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-soe-decision-check",
+      "github": "https://github.com/PerryLink/dsh-soe-decision-check",
+      "group": "治理",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-soilwater-check",
+      "github": "https://github.com/PerryLink/dsh-soilwater-check",
+      "group": "工程建设",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-sop-sync-check",
+      "github": "https://github.com/PerryLink/dsh-sop-sync-check",
+      "group": "治理",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-spc-gbt-adapter",
+      "github": "https://github.com/PerryLink/dsh-spc-gbt-adapter",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-tender-extract",
+      "github": "https://github.com/PerryLink/dsh-tender-extract",
+      "group": "招投标",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-tender-matrix",
+      "github": "https://github.com/PerryLink/dsh-tender-matrix",
+      "group": "招投标",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    },
+    {
+      "name": "dsh-warranty-calc",
+      "github": "https://github.com/PerryLink/dsh-warranty-calc",
+      "group": "质量",
+      "role": "plugin",
+      "star": 0,
+      "status": "active"
+    }
+  ]
+}

@@ -260,7 +260,7 @@ const requireSibling = (rel, why) => {
 // `non-infra == rosterCount - 1`, and the statuses are compared over the non-infra
 // entries with the infra spec removed. It also carries a per-repo `status`, which is
 // what certification's markers and the portal's cards are rendered from.
-const KIT_ROSTER = 'dsh-plugin-kit/data/repos.json'
+const KIT_ROSTER = 'dsh-kit/data/repos.json'
 let kitRoster = null
 const INFRA_SPECS = ['@perrylink/dsh-plugin-kit']
 if (requireSibling(KIT_ROSTER, 'the machine-readable family roster the siblings count')) {
