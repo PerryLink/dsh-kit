@@ -33,7 +33,7 @@ dsh plugin --profile web add dsh-permission-rules    # allow/deny/ask rules
 dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 ```
 
-## What's inside (curated highlights — the installers cover 39 npm specs, plus 53 opt-in)
+## What's inside (curated highlights — the installers cover 43 npm specs, plus 53 opt-in (96 total))
 
 Two of the highlights below are **retired** and one is **frozen**. They all stay listed, and stay
 installable, because people already run them: 🧊 **FROZEN** means no new features and only a real breakage gets fixed, 🚫 **RETIRED**
