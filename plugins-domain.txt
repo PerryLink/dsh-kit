@@ -3,7 +3,8 @@
 # The mainline roster lives in plugins.txt (96 specs). These 24 domain packages
 # are published, catalog-listed and not retired, but they are deliberately
 # opt-in: install-all.sh/ps1 only read plugins.txt, so a default install stays
-# at 96. Add them explicitly with `install-all.sh --domain` (or by spec).
+# at 96. Add them explicitly by spec (`dsh plugin add <name>`); the installers
+# intentionally have no --domain flag yet.
 #
 # Source: 00-live/study-2026-11-02/ROSTER-RECONCILE.md §B (2026-11-03).
 # Status comes from the same table: 17 active, 7 frozen.
