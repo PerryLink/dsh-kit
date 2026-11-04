@@ -6,7 +6,7 @@
 
 **One-command starter pack for the actively maintained PerryLink DeepSeek Harness plugins, plus frozen ones kept installable.**
 
-[dsh-kit](https://github.com/PerryLink/dsh-kit) is a curated collection of [PerryLink's DSH plugin family](https://github.com/PerryLink) — the Claude Code parity trio plus the rest of the family, across security, workflows, research, messaging bridges, and developer experience. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
+[dsh-kit](https://github.com/PerryLink/dsh-kit) is the installer and mainline roster of [PerryLink's full DSH plugin family](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md) — three-level standards and checks, guides, the developer toolchain, runtime plugins, the 53-checker compliance suite, domain operations, catalogs, and the separate Phocinae decision line. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
 
 ![Workflow diagram for dsh-kit](docs/assets/dsh-kit-flow.svg)
 
@@ -94,7 +94,7 @@ Issues and feature requests: open them on the individual plugin repo, or discuss
 
 ## PerryLink DSH Plugin Family
 
-This project is part of the DeepSeek Harness plugin family from [PerryLink](https://github.com/PerryLink). The roster stays collapsed below so every README keeps a short first screen; expand it to see every row and its status.
+This project is part of the DeepSeek Harness plugin family from [PerryLink](https://github.com/PerryLink). The family has three layers — standards/guides, developer toolchain, runtime/domain plugins — plus the Phocinae decision line; the full group-by-group index is [FAMILY.md](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md). The install roster stays collapsed below so every README keeps a short first screen; expand it to see every row and its status.
 
 <details>
 <summary>Expand all plugins</summary>

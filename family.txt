@@ -1,4 +1,4 @@
-# Full-family install roster — 117 packages.
+# Full-family install roster — 117 packages. Full group index: https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md
 # Generated from dsh-plugins/family.json installScope; do not hand-edit specs.
 # 39 mainline default + 53 mainline opt-in + 10 catalog-only + 15 domain plugins.
 # Excluded: 2 domain suites (their members are listed), 3 retired, 3 infrastructure.
