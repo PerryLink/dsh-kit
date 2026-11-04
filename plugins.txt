@@ -67,7 +67,7 @@ dsh-tender-extract  # opt-in
 dsh-tender-matrix  # opt-in
 dsh-warranty-calc  # opt-in
 
-# ── 🧊 Frozen (5): no new features, minimal breakage fixes only ────────────
+# ── 🧊 Frozen (8): no new features, minimal breakage fixes only ────────────
 # They stay installable and stay on this list. Marked so nobody reads them as
 # actively developed work.
 #
