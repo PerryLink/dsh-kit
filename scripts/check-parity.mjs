@@ -466,6 +466,13 @@ const branchesOf = (name) => {
   return { current: current.stdout.trim(), default: def || null }
 }
 
+/**
+ * Archived repositories are read-only: GitHub rejects every content write, so
+ * their family tables cannot be kept in sync. Treat them as SKIP with a reason
+ * rather than a red gate nothing can fix.
+ */
+const ARCHIVED_SIBLINGS = new Set(['dsh-background-agents', 'dsh-session-pin', 'dsh-team-rooms'])
+
 if (familyRoot !== root && existsSync(familyRoot)) {
   const readmeDirs = readdirSync(familyRoot, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
@@ -475,6 +482,10 @@ if (familyRoot !== root && existsSync(familyRoot)) {
   let tablesSeen = 0
   let offDefault = 0
   for (const name of readmeDirs) {
+    if (ARCHIVED_SIBLINGS.has(name)) {
+      skips.push(`${name}/README.md — repository is archived (read-only), so its family table cannot be synced`)
+      continue
+    }
     const rel = `${name}/README.md`
     const text = familyRead(rel)
     if (!TABLE_HEADER.test(text)) continue
