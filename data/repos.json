@@ -235,9 +235,9 @@
       "status": "active"
     },
     {
-      "name": "dsh-translate",
-      "github": "https://github.com/PerryLink/dsh-translate",
-      "group": "集成",
+      "name": "dsh-param-repair",
+      "github": "https://github.com/PerryLink/dsh-param-repair",
+      "group": "开发工具",
       "role": "plugin",
       "star": 14,
       "status": "active"
