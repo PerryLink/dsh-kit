@@ -203,3 +203,13 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-team-rooms](https://github.com/PerryLink/dsh-team-rooms)** | 🚫 RETIRED — see the repo README |
 
 </details>
+
+## Not in the install roster
+
+Two surfaces are catalog-only, installed by name and deliberately absent from `plugins.txt` / `family.txt`
+(so `install-all` does not install them):
+
+- **`dsh-translate` 0.3.2** — full-page web-GUI translation on your own model route; code, paths, commands,
+  identifiers and product names stay verbatim. `dsh plugin --profile <name> add dsh-translate`.
+- **The 19-package research suite** — citation, claim, dataset, grant, manuscript, meta-analysis and
+  reproducibility tools; see [FAMILY.md §10](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md#10-research-suite-catalog-only-19).
