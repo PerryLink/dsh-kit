@@ -17,16 +17,29 @@ for (const match of readme.matchAll(/<(https?:\/\/[^>\s]+)>/g)) {
 
 const failures = []
 const queue = [...urls]
-const CONCURRENCY = 8
+// 8 parallel requests to github.com from one runner produced 7 timeouts on
+// 2026-11-08 while every URL was healthy on retry. Keep the concurrency low
+// and retry transport errors / 429 / 5xx with backoff so a slow GitHub
+// response cannot fail an otherwise healthy README.
+const CONCURRENCY = 4
+const ATTEMPTS = 3
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 const workers = Array.from({ length: CONCURRENCY }, async () => {
   while (queue.length > 0) {
     const url = queue.shift()
-    try {
-      const response = await fetch(url, { method: 'GET', headers: { 'user-agent': 'dsh-kit-link-check/1.0' }, signal: AbortSignal.timeout(30000) })
-      if (!response.ok) failures.push(`${url} -> HTTP ${response.status}`)
-    } catch (error) {
-      failures.push(`${url} -> ${error?.cause?.code ?? error?.message ?? String(error)}`)
+    let lastError = ''
+    for (let attempt = 1; attempt <= ATTEMPTS; attempt += 1) {
+      try {
+        const response = await fetch(url, { method: 'GET', headers: { 'user-agent': 'dsh-kit-link-check/1.0' }, signal: AbortSignal.timeout(45000) })
+        if (response.ok) { lastError = ''; break }
+        lastError = `HTTP ${response.status}`
+        if (response.status !== 429 && response.status < 500) break
+      } catch (error) {
+        lastError = String(error?.cause?.code ?? error?.message ?? error)
+      }
+      if (attempt < ATTEMPTS) await sleep(1500 * attempt)
     }
+    if (lastError !== '') failures.push(`${url} -> ${lastError}`)
   }
 })
 await Promise.all(workers)
