@@ -188,7 +188,7 @@ This project is part of the DeepSeek Harness plugin family from [PerryLink](http
 | **[dsh-tender-matrix](https://github.com/PerryLink/dsh-tender-matrix)** |  |
 | **[dsh-test-drive](https://github.com/PerryLink/dsh-test-drive)** |  |
 | **[dsh-dida](https://github.com/PerryLink/dsh-dida)** |  |
-| **[dsh-translate](https://github.com/PerryLink/dsh-translate)** |  |
+| **[dsh-param-repair](https://github.com/PerryLink/dsh-param-repair)** |  |
 | **[dsh-warranty-calc](https://github.com/PerryLink/dsh-warranty-calc)** |  |
 | **[dsh-catalog](https://github.com/PerryLink/dsh-catalog)** |  |
 | **[dsh-plugin-certification](https://github.com/PerryLink/dsh-plugin-certification)** |  |

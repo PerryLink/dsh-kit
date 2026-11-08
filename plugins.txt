@@ -125,7 +125,7 @@ dsh-score
 dsh-session-sync
 dsh-talk
 dsh-test-drive
-dsh-translate
+dsh-param-repair
 dsh-check-pack
 dsh-github-bot
 dsh-clinic

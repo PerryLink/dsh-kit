@@ -42,7 +42,7 @@ dsh-session-sync
 dsh-talk
 dsh-test-drive
 @perrylink/dsh-ticktick
-dsh-translate
+dsh-param-repair
 
 # ── mainline-opt-in (53) ──
 dsh-aqua-input-check
