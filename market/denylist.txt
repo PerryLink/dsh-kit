@@ -1,0 +1,6 @@
+# Explicit excludes for the personal market index.
+# Keep this file small: the roster is the source of truth for what is listed.
+# A name here must still appear in plugins.txt or family.txt; market-check fails if it goes stale.
+
+# Third-party package that happens to live under the PerryLink GitHub org (Phocinae).
+dsh-phocinae

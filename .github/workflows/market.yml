@@ -1,0 +1,23 @@
+name: market
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  market-index:
+    name: market index (offline checks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - name: Check committed index
+        run: npm run check:market
+      - name: Generator fixtures
+        run: npm run test:market

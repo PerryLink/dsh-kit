@@ -1,0 +1,28 @@
+{
+  "dropped": [
+    {
+      "name": "@perrylink/dsh-github",
+      "reason": "all-deprecated"
+    },
+    {
+      "name": "@perrylink/dsh-plugin-doctor",
+      "reason": "all-deprecated"
+    },
+    {
+      "name": "@perrylink/dsh-plugin-kit",
+      "reason": "all-deprecated"
+    },
+    {
+      "name": "dsh-plugin-upgrade",
+      "reason": "all-deprecated"
+    },
+    {
+      "name": "@perrylink/dsh-skill-pack-security-provider",
+      "reason": "all-deprecated"
+    },
+    {
+      "name": "@perrylink/dsh-ticktick",
+      "reason": "all-deprecated"
+    }
+  ]
+}
