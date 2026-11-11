@@ -88,6 +88,19 @@ means the host now does this natively and the package is npm-deprecated — reti
 - Deprecated names are not installed: `dsh-background-agents`, `dsh-session-pin` and `dsh-team-rooms` (the host implements all three natively now), and `dsh-plugin-upgrade-015` plus its earlier name `dsh-plugin-upgrade-rc1` (superseded by `dsh-codemod`, which carries every corridor in one package). They stay on npm for anyone who already installed them.
 - License: Apache-2.0 (matching the plugin family).
 
+## Personal plugin index
+
+[`market/index.json`](market/index.json) is a [DSH plugin-market format 1](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/guide/plugin-market.md) index generated from this roster. It only lists PerryLink packages and is published at `https://perrylink.github.io/dsh-kit/index.json`; add it under **Plugins → Discover → Add index source** in DSH. It is independent from any official or community market and does not replace the installers.
+
+```sh
+npm ci
+npm run build:market   # regenerate from plugins.txt + family.txt (reads npm)
+npm run check:market   # offline format/coverage checks
+npm run test:market    # offline generator fixtures
+```
+
+See [`market/README.md`](market/README.md) for client support (including dsh-Go/dsh-TUI limits), the denylist, and the display overlay.
+
 ## Feedback
 
 Issues and feature requests: open them on the individual plugin repo, or discuss the whole family on the [official DeepSeek Harness Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions) (category "Show Your Plugins!").
