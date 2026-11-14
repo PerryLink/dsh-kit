@@ -8446,6 +8446,17 @@
       },
       "versions": [
         {
+          "version": "0.4.25",
+          "publishTimestamp": 1794620200,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0 || >=0.2.2-0 <0.3.0"
+          }
+        },
+        {
           "version": "0.4.24",
           "publishTimestamp": 1794590232,
           "source": {
