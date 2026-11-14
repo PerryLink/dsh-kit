@@ -226,3 +226,8 @@ Two surfaces are catalog-only, installed by name and deliberately absent from `p
   identifiers and product names stay verbatim. `dsh plugin --profile <name> add dsh-translate`.
 - **The 19-package research suite** — citation, claim, dataset, grant, manuscript, meta-analysis and
   reproducibility tools; see [FAMILY.md §10](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md#10-research-suite-catalog-only-19).
+
+
+## Compatibility coverage
+
+[HCB](https://github.com/PerryLink/dsh-compat-baseline) covers the full 112-package family roster (34 mainline-default + 53 opt-in + 10 catalog-only + 15 domain) plus 31 external plugins. CI can call `PerryLink/hcb-action@main`.
