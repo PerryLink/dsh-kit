@@ -230,4 +230,4 @@ Two surfaces are catalog-only, installed by name and deliberately absent from `p
 
 ## Compatibility coverage
 
-[HCB](https://github.com/PerryLink/dsh-hcb) 0.10.1 records **143 checked rows** — the full 112-package family roster (34 mainline-default + 53 opt-in + 10 catalog-only + 15 domain) plus 31 external plugins — with **3 FLOW `manual`**. CI can call `PerryLink/dsh-hcb-action@main`.
+[HCB](https://github.com/PerryLink/dsh-hcb) 0.10.2 records **143 checked rows** — the full 112-package family roster (34 mainline-default + 53 opt-in + 10 catalog-only + 15 domain) plus 31 external plugins — with **3 FLOW `manual`** and checker **143/143 rows on `dsh-standards@1.7.0`**. CI can call `PerryLink/dsh-hcb-action@main`.
