@@ -136,18 +136,19 @@ Este proyecto forma parte de la familia de plugins de DeepSeek Harness de [Perry
 | **[dsh-aqua-input-check](https://github.com/PerryLink/dsh-aqua-input-check)** |  |
 | **[dsh-archive-check](https://github.com/PerryLink/dsh-archive-check)** |  |
 | **[dsh-auto-review](https://github.com/PerryLink/dsh-auto-review)** |  |
-| **[dsh-autotier](https://github.com/PerryLink/dsh-autotier)** | 🧊 FROZEN — ver el README del repo |
 | **[dsh-bid-ca-precheck](https://github.com/PerryLink/dsh-bid-ca-precheck)** |  |
 | **[dsh-bid-qual-check](https://github.com/PerryLink/dsh-bid-qual-check)** |  |
-| **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** | 🧊 FROZEN — ver el README del repo |
+| **[dsh-check-pack](https://github.com/PerryLink/dsh-check-pack)** |  |
 | **[dsh-checkpoint-rewind](https://github.com/PerryLink/dsh-checkpoint-rewind)** |  |
 | **[dsh-click](https://github.com/PerryLink/dsh-click)** |  |
-| **[dsh-community-bench](https://github.com/PerryLink/dsh-community-bench)** | 🧊 FROZEN — ver el README del repo |
+| **[dsh-clinic](https://github.com/PerryLink/dsh-clinic)** |  |
+| **[dsh-codemod](https://github.com/PerryLink/dsh-codemod)** |  |
 | **[dsh-composer-history](https://github.com/PerryLink/dsh-composer-history)** |  |
 | **[dsh-contract-stance](https://github.com/PerryLink/dsh-contract-stance)** |  |
 | **[dsh-customs-doc-check](https://github.com/PerryLink/dsh-customs-doc-check)** |  |
 | **[dsh-data-quality](https://github.com/PerryLink/dsh-data-quality)** |  |
 | **[dsh-demurrage-ledger](https://github.com/PerryLink/dsh-demurrage-ledger)** |  |
+| **[dsh-dida](https://github.com/PerryLink/dsh-dida)** |  |
 | **[dsh-doublecheck](https://github.com/PerryLink/dsh-doublecheck)** |  |
 | **[dsh-drill-script-check](https://github.com/PerryLink/dsh-drill-script-check)** |  |
 | **[dsh-eia-guide-check](https://github.com/PerryLink/dsh-eia-guide-check)** |  |
@@ -187,18 +188,18 @@ Este proyecto forma parte de la familia de plugins de DeepSeek Harness de [Perry
 | **[dsh-ota-review-check](https://github.com/PerryLink/dsh-ota-review-check)** |  |
 | **[dsh-output-styles](https://github.com/PerryLink/dsh-output-styles)** |  |
 | **[dsh-paper-doc-adapter](https://github.com/PerryLink/dsh-paper-doc-adapter)** |  |
+| **[dsh-param-repair](https://github.com/PerryLink/dsh-param-repair)** |  |
 | **[dsh-permission-rules](https://github.com/PerryLink/dsh-permission-rules)** |  |
 | **[dsh-permit-report-check](https://github.com/PerryLink/dsh-permit-report-check)** |  |
+| **[dsh-phocinae](https://github.com/PerryLink/dsh-phocinae)** |  |
+| **[dsh-phone-inbox](https://github.com/PerryLink/dsh-phone-inbox)** |  |
 | **[dsh-pipeline-check](https://github.com/PerryLink/dsh-pipeline-check)** |  |
 | **[dsh-pleading-draft](https://github.com/PerryLink/dsh-pleading-draft)** |  |
-| **[dsh-clinic](https://github.com/PerryLink/dsh-clinic)** |  |
-| **[dsh-primer](https://github.com/PerryLink/dsh-primer)** |  |
-| **[dsh-scaffold](https://github.com/PerryLink/dsh-scaffold)** |  |
-| **[dsh-codemod](https://github.com/PerryLink/dsh-codemod)** |  |
 | **[dsh-policy-brief-draft](https://github.com/PerryLink/dsh-policy-brief-draft)** |  |
 | **[dsh-power-loss-split](https://github.com/PerryLink/dsh-power-loss-split)** |  |
 | **[dsh-power-ticket-check](https://github.com/PerryLink/dsh-power-ticket-check)** |  |
 | **[dsh-ppap-check](https://github.com/PerryLink/dsh-ppap-check)** |  |
+| **[dsh-primer](https://github.com/PerryLink/dsh-primer)** |  |
 | **[dsh-protest-deadline](https://github.com/PerryLink/dsh-protest-deadline)** |  |
 | **[dsh-railway-window](https://github.com/PerryLink/dsh-railway-window)** |  |
 | **[dsh-repair-order-qc](https://github.com/PerryLink/dsh-repair-order-qc)** |  |
@@ -206,10 +207,11 @@ Este proyecto forma parte de la familia de plugins de DeepSeek Harness de [Perry
 | **[dsh-review-reply-check](https://github.com/PerryLink/dsh-review-reply-check)** |  |
 | **[dsh-rulefile-check](https://github.com/PerryLink/dsh-rulefile-check)** |  |
 | **[dsh-safety-brief-check](https://github.com/PerryLink/dsh-safety-brief-check)** |  |
+| **[dsh-scaffold](https://github.com/PerryLink/dsh-scaffold)** |  |
 | **[dsh-score](https://github.com/PerryLink/dsh-score)** |  |
+| **[dsh-security-pack](https://github.com/PerryLink/dsh-security-pack)** |  |
 | **[dsh-session-sync](https://github.com/PerryLink/dsh-session-sync)** |  |
 | **[dsh-site-log-check](https://github.com/PerryLink/dsh-site-log-check)** |  |
-| **[dsh-security-pack](https://github.com/PerryLink/dsh-security-pack)** |  |
 | **[dsh-soe-decision-check](https://github.com/PerryLink/dsh-soe-decision-check)** |  |
 | **[dsh-soilwater-check](https://github.com/PerryLink/dsh-soilwater-check)** |  |
 | **[dsh-sop-sync-check](https://github.com/PerryLink/dsh-sop-sync-check)** |  |
@@ -218,20 +220,18 @@ Este proyecto forma parte de la familia de plugins de DeepSeek Harness de [Perry
 | **[dsh-tender-extract](https://github.com/PerryLink/dsh-tender-extract)** |  |
 | **[dsh-tender-matrix](https://github.com/PerryLink/dsh-tender-matrix)** |  |
 | **[dsh-test-drive](https://github.com/PerryLink/dsh-test-drive)** |  |
-| **[dsh-dida](https://github.com/PerryLink/dsh-dida)** |  |
-| **[dsh-param-repair](https://github.com/PerryLink/dsh-param-repair)** |  |
 | **[dsh-warranty-calc](https://github.com/PerryLink/dsh-warranty-calc)** |  |
-| **[dsh-catalog](https://github.com/PerryLink/dsh-catalog)** |  |
-| **[dsh-plugin-certification](https://github.com/PerryLink/dsh-plugin-certification)** |  |
-| **[dsh-plugin-portal](https://github.com/PerryLink/dsh-plugin-portal)** |  |
-| **[dsh-budget](https://github.com/PerryLink/dsh-budget)** | 🧊 FROZEN — ver el README del repo |
-| **[dsh-claude-move](https://github.com/PerryLink/dsh-claude-move)** | 🧊 FROZEN — ver el README del repo |
-| **[dsh-defend](https://github.com/PerryLink/dsh-defend)** | 🧊 FROZEN — ver el README del repo |
-| **[dsh-draw](https://github.com/PerryLink/dsh-draw)** | 🧊 FROZEN — ver el README del repo |
-| **[dsh-reach](https://github.com/PerryLink/dsh-reach)** | 🧊 FROZEN — ver el README del repo |
-| **[dsh-background-agents](https://github.com/PerryLink/dsh-background-agents)** | 🚫 RETIRED — ver el README del repo |
-| **[dsh-session-pin](https://github.com/PerryLink/dsh-session-pin)** | 🚫 RETIRED — ver el README del repo |
-| **[dsh-team-rooms](https://github.com/PerryLink/dsh-team-rooms)** | 🚫 RETIRED — ver el README del repo |
+| **[dsh-autotier](https://github.com/PerryLink/dsh-autotier)** | 🧊 CONGELADO — ver el README del repositorio |
+| **[dsh-budget](https://github.com/PerryLink/dsh-budget)** | 🧊 CONGELADO — ver el README del repositorio |
+| **[dsh-cert-mcp](https://github.com/PerryLink/dsh-cert-mcp)** | 🧊 CONGELADO — ver el README del repositorio |
+| **[dsh-claude-move](https://github.com/PerryLink/dsh-claude-move)** | 🧊 CONGELADO — ver el README del repositorio |
+| **[dsh-community-bench](https://github.com/PerryLink/dsh-community-bench)** | 🧊 CONGELADO — ver el README del repositorio |
+| **[dsh-defend](https://github.com/PerryLink/dsh-defend)** | 🧊 CONGELADO — ver el README del repositorio |
+| **[dsh-draw](https://github.com/PerryLink/dsh-draw)** | 🧊 CONGELADO — ver el README del repositorio |
+| **[dsh-reach](https://github.com/PerryLink/dsh-reach)** | 🧊 CONGELADO — ver el README del repositorio |
+| **[dsh-background-agents](https://github.com/PerryLink/dsh-background-agents)** | 🚫 RETIRADO — ver el README del repositorio |
+| **[dsh-session-pin](https://github.com/PerryLink/dsh-session-pin)** | 🚫 RETIRADO — ver el README del repositorio |
+| **[dsh-team-rooms](https://github.com/PerryLink/dsh-team-rooms)** | 🚫 RETIRADO — ver el README del repositorio |
 
 </details>
 
