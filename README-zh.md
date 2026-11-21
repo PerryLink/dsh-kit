@@ -100,7 +100,6 @@ dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 - 安装脚本是**幂等**的——可以安全地重复运行。
 - `dsh-security-pack` 从 npm 安装。
 - 版本跟随最新的 npm 发布；如果需要可复现性，请按插件锁定具体版本。
-- **每月下载基线：** `node scripts/npm-downloads-snapshot.mjs` 读取本文件自身的名册，把每个 spec 的周、月 npm 下载量追加到 `data/npm-downloads-snapshots.json`，这样分发变化可以与上个月对比衡量，而不是凭空断言。它只写这一条序列——profile 页面的下载数字保持原处。参见 `scripts/npm-downloads-snapshot.mjs`。
 - 已弃用名称不会被安装：`dsh-background-agents`、`dsh-session-pin` 与 `dsh-team-rooms`（宿主现已原生实现这三者），以及 `dsh-plugin-upgrade-015` 及其更早名称 `dsh-plugin-upgrade-rc1`（已被 `dsh-codemod` 取代，后者把每条走廊都装进一个包）。它们仍留在 npm 上，供已经安装过的人使用。
 - 许可证：Apache-2.0（与插件家族一致）。
 

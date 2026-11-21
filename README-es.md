@@ -103,7 +103,6 @@ significa que el host ya hace esto de forma nativa y el paquete está marcado co
 - Los scripts de instalación son **idempotentes**: se pueden volver a ejecutar sin riesgo.
 - `dsh-security-pack` se instala desde npm.
 - Las versiones siguen las últimas publicaciones de npm; fija una versión concreta por plugin si necesitas reproducibilidad.
-- **Base mensual de descargas:** `node scripts/npm-downloads-snapshot.mjs` lee el roster del propio archivo y añade las descargas semanales y mensuales de cada spec en npm a `data/npm-downloads-snapshots.json`, de modo que un cambio de distribución se pueda medir contra un mes anterior en lugar de afirmarlo. Solo escribe esa serie — la cifra de descargas de la página de perfil se queda donde está. Ver `scripts/npm-downloads-snapshot.mjs`.
 - Los nombres obsoletos no se instalan: `dsh-background-agents`, `dsh-session-pin` y `dsh-team-rooms` (el host ya implementa los tres de forma nativa), y `dsh-plugin-upgrade-015` con su nombre anterior `dsh-plugin-upgrade-rc1` (sustituidos por `dsh-codemod`, que reúne todos los corredores en un solo paquete). Siguen en npm para quien ya los tenga instalados.
 - Licencia: Apache-2.0 (la misma de la familia de plugins).
 
