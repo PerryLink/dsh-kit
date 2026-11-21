@@ -103,7 +103,7 @@ means the host now does this natively and the package is npm-deprecated — reti
 - Install scripts are **idempotent** — safe to re-run.
 - `dsh-security-pack` installs from npm.
 - Versions track the latest npm releases; pin a specific version per plugin if you need reproducibility.
-- **Monthly download baseline:** `node scripts/npm-downloads-snapshot.mjs` reads this file's own roster and appends every spec's week and month npm downloads to `data/npm-downloads-snapshots.json`, so a distribution change can be measured against a previous month instead of asserted. It writes only that series — the profile page's download figure stays where it is. See [`scripts/README-npm-downloads-snapshot.md`](scripts/README-npm-downloads-snapshot.md).
+- **Monthly download baseline:** `node scripts/npm-downloads-snapshot.mjs` reads this file's own roster and appends every spec's week and month npm downloads to `data/npm-downloads-snapshots.json`, so a distribution change can be measured against a previous month instead of asserted. It writes only that series — the profile page's download figure stays where it is. See `scripts/npm-downloads-snapshot.mjs`.
 - Deprecated names are not installed: `dsh-background-agents`, `dsh-session-pin` and `dsh-team-rooms` (the host implements all three natively now), and `dsh-plugin-upgrade-015` plus its earlier name `dsh-plugin-upgrade-rc1` (superseded by `dsh-codemod`, which carries every corridor in one package). They stay on npm for anyone who already installed them.
 - License: Apache-2.0 (matching the plugin family).
 

@@ -103,7 +103,7 @@ dsh plugin --profile web add dsh-output-styles       # outputStyles equivalent
 - इंस्टॉल स्क्रिप्ट **idempotent** हैं — दोबारा चलाना सुरक्षित है।
 - `dsh-security-pack` npm से इंस्टॉल होता है।
 - संस्करण npm के नवीनतम रिलीज़ के साथ चलते हैं; reproducibility चाहिए तो प्रति-प्लगइन एक विशेष संस्करण पिन करें।
-- **मासिक डाउनलोड बेसलाइन:** `node scripts/npm-downloads-snapshot.mjs` इसी फ़ाइल का roster पढ़कर हर spec के साप्ताहिक और मासिक npm डाउनलोड `data/npm-downloads-snapshots.json` में जोड़ता है, ताकि डिस्ट्रिब्यूशन बदलाव को दावा करने के बजाय पिछले महीने से मापा जा सके। यह केवल वही सीरीज़ लिखता है — profile पेज का डाउनलोड आँकड़ा जहाँ था वहीं रहता है। देखें [`scripts/README-npm-downloads-snapshot.md`](scripts/README-npm-downloads-snapshot.md)।
+- **मासिक डाउनलोड बेसलाइन:** `node scripts/npm-downloads-snapshot.mjs` इसी फ़ाइल का roster पढ़कर हर spec के साप्ताहिक और मासिक npm डाउनलोड `data/npm-downloads-snapshots.json` में जोड़ता है, ताकि डिस्ट्रिब्यूशन बदलाव को दावा करने के बजाय पिछले महीने से मापा जा सके। यह केवल वही सीरीज़ लिखता है — profile पेज का डाउनलोड आँकड़ा जहाँ था वहीं रहता है। देखें `scripts/npm-downloads-snapshot.mjs`।
 - deprecated नाम इंस्टॉल नहीं होते: `dsh-background-agents`, `dsh-session-pin` और `dsh-team-rooms` (host अब तीनों नेटिव लागू करता है), तथा `dsh-plugin-upgrade-015` और उसका पुराना नाम `dsh-plugin-upgrade-rc1` (जिन्हें `dsh-codemod` ने बदला है, जो सारे corridor एक पैकेज में लाता है)। जो पहले से इंस्टॉल कर चुके हैं, उनके लिए वे npm पर रहते हैं।
 - लाइसेंस: Apache-2.0 (प्लगइन परिवार के समान)।
 
