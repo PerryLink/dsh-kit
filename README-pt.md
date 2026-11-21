@@ -8,6 +8,10 @@ Esta página é uma entrada localizada; a documentação técnica completa está
 
 ## Docs
 
+![dsh-kit: execução real de terminal](docs/assets/dsh-kit-demo.gif)
+
+*Repetição animada de uma execução real registrada neste repositório.*
+
 [Privacy](PRIVACY.md) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
 
 

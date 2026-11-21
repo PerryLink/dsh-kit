@@ -16,6 +16,10 @@
 
 ## Quick start
 
+![dsh-kit: real terminal run](docs/assets/dsh-kit-demo.gif)
+
+*Animated replay of a real run recorded in this repository.*
+
 Pick a profile (e.g. `web`), then install everything:
 
 ```sh
