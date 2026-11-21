@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-label="dsh-kit structure diagram">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#131a2a"/><stop offset="1" stop-color="#0c1016"/></linearGradient>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#16122c" flood-opacity="0.45"/></filter>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8496f5"/></marker>
+</defs>
+<rect width="1100" height="660" fill="url(#bg)"/>
+<text x="44" y="58" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="28" font-weight="700">dsh-kit</text>
+<text x="44" y="88" fill="#a8b1c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="15">family.txt → plugins.txt → install-all.sh → dsh plugin add → running profile</text>
+<rect x="904.78125" y="36" width="151.21875" height="26" rx="13.0" fill="#202839"/>
+<text x="916.78125" y="53.08" fill="#8496f5" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" font-weight="700">96 specs · 117 family</text>
+<rect x="44" y="120" width="214" height="250" rx="18" fill="#1b2231" stroke="#2e374b" stroke-width="1.5" filter="url(#soft)"/>
+<text x="62" y="146" fill="#737b8d" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="12" font-weight="700">01</text>
+<text x="62" y="172" fill="#f0f3f9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="16.5" font-weight="700">Roster</text>
+<text x="62" y="196" fill="#a8b1c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">family.txt + data/repos.json</text>
+<rect x="62" y="209" width="178" height="26" rx="8" fill="#202839"/>
+<text x="72" y="227" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">117 family specs</text>
+<rect x="62" y="241" width="178" height="26" rx="8" fill="#202839"/>
+<text x="72" y="259" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">99 PerryLink repos</text>
+<rect x="62" y="273" width="178" height="26" rx="8" fill="#202839"/>
+<text x="72" y="291" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">6 retired excluded</text>
+<line x1="260" y1="245.0" x2="276" y2="245.0" stroke="#8496f5" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="278" y="120" width="214" height="250" rx="18" fill="#1b2231" stroke="#2e374b" stroke-width="1.5" filter="url(#soft)"/>
+<text x="296" y="146" fill="#737b8d" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="12" font-weight="700">02</text>
+<text x="296" y="172" fill="#f0f3f9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="16.5" font-weight="700">Install</text>
+<text x="296" y="196" fill="#a8b1c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">install-all.{sh,ps1}</text>
+<rect x="296" y="209" width="178" height="26" rx="8" fill="#202839"/>
+<text x="306" y="227" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">plugins.txt 96 specs</text>
+<rect x="296" y="241" width="178" height="26" rx="8" fill="#202839"/>
+<text x="306" y="259" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">strip FROZEN marker</text>
+<rect x="296" y="273" width="178" height="26" rx="8" fill="#202839"/>
+<text x="306" y="291" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">idempotent re-run</text>
+<line x1="494" y1="245.0" x2="510" y2="245.0" stroke="#8496f5" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="512" y="120" width="214" height="250" rx="18" fill="#1b2231" stroke="#2e374b" stroke-width="1.5" filter="url(#soft)"/>
+<text x="530" y="146" fill="#737b8d" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="12" font-weight="700">03</text>
+<text x="530" y="172" fill="#f0f3f9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="16.5" font-weight="700">Gate</text>
+<text x="530" y="196" fill="#a8b1c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">scripts/check-parity.mjs</text>
+<rect x="530" y="209" width="178" height="26" rx="8" fill="#202839"/>
+<text x="540" y="227" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">9 family tables</text>
+<rect x="530" y="241" width="178" height="26" rx="8" fill="#202839"/>
+<text x="540" y="259" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">README 88/8/96/99</text>
+<rect x="530" y="273" width="178" height="26" rx="8" fill="#202839"/>
+<text x="540" y="291" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">both installers read it</text>
+<rect x="752" y="120" width="304" height="148" rx="18" fill="#1b2231" stroke="#2e374b" stroke-width="1.5" filter="url(#soft)"/>
+<text x="772" y="148" fill="#8496f5" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14.5" font-weight="700">dsh plugin --profile</text>
+<rect x="981.03125" y="130" width="61.0625" height="18" rx="9.0" fill="#202839"/>
+<text x="990.03125" y="142.57" fill="#8496f5" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">96 specs</text>
+<text x="772" y="176" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">web · domain · research</text>
+<text x="772" y="198" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">dsh plugin add &lt;spec&gt;</text>
+<text x="772" y="220" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">idempotent re-run</text>
+<rect x="752" y="288" width="304" height="122" rx="18" fill="#1b2231" stroke="#2e374b" stroke-width="1.5" filter="url(#soft)"/>
+<text x="772" y="316" fill="#a8b1c4" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14.5" font-weight="700">market/index.json</text>
+<rect x="980.046875" y="298" width="61.125" height="18" rx="9.0" fill="#202839"/>
+<text x="989.046875" y="310.57" fill="#a8b1c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">format 1</text>
+<text x="772" y="344" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">npm run build:market</text>
+<text x="772" y="366" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">npm run check:market</text>
+<text x="772" y="388" fill="#f0f3f9" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">perrylink.github.io/dsh-kit</text>
+<rect x="752" y="430" width="304" height="82" rx="18" fill="#1b2231" stroke="#8496f5" stroke-width="1.6" filter="url(#soft)"/>
+<text x="772" y="458" fill="#f0f3f9" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5" font-weight="700">gate</text>
+<text x="772" y="482" fill="#a8b1c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">node scripts/check-parity.mjs</text>
+<text x="772" y="502" fill="#737b8d" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">the roster is the only source</text>
+<path d="M730 245.0 H742" fill="none" stroke="#8496f5" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M742 210 V471" fill="none" stroke="#8496f5" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="742" y1="194" x2="750" y2="194" stroke="#8496f5" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="742" y1="349" x2="750" y2="349" stroke="#8496f5" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="742" y1="471" x2="750" y2="471" stroke="#8496f5" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="44" y1="420" x2="714" y2="420" stroke="#2b3348" stroke-width="1"/>
+<text x="44" y="444" fill="#737b8d" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">96 specs = 88 active + 8 frozen; the 6 retired packages are excluded and stay on npm only for existing installs.</text>
+<text x="44" y="464" fill="#737b8d" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">check-parity.mjs holds plugins.txt, both installers, this README (5 places) and 9 sibling family tables to one list.</text>
+<text x="44" y="484" fill="#737b8d" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">family.txt lists 117 install specs: 39 mainline default + 53 mainline opt-in + 10 catalog-only + 15 domain.</text>
+<line x1="44" y1="564" x2="1056" y2="564" stroke="#2b3348" stroke-width="1"/>
+<text x="44" y="588" fill="#a8b1c4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">inputs: plugins.txt · family.txt · data/repos.json · data/npm-downloads-snapshots.json</text>
+<text x="44" y="610" fill="#737b8d" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">outputs: install-all.{sh,ps1} · family profile API · market/index.json</text>
+</svg>

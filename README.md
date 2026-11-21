@@ -1,4 +1,16 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-kit-hero-en-dark.webp">
+  <img src="docs/assets/dsh-kit-hero-en-light.webp" width="100%" alt="dsh-kit: one-command installer for the family — plugins.txt holds 96 specs (88 active + 8 frozen), the roster is 99 repos with 6 retired excluded, both installers read the same list, and node scripts/check-parity.mjs pins README 88/8/96/99 and 9 sibling family tables to it">
+</picture>
+
 # dsh-kit
+
+[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+
+</div>
+
 [![Gitee](https://img.shields.io/badge/Gitee-mirror-c71d23?logo=gitee)](https://gitee.com/perrylink/dsh-kit)
 [![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-kit?metric=downloads)](https://dshfind.com/plugins/PerryLink/dsh-kit?ref=badge)
 
@@ -9,16 +21,19 @@
 
 [dsh-kit](https://github.com/PerryLink/dsh-kit) is the installer and mainline roster of [PerryLink's full DSH plugin family](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md) — three-level standards and checks, guides, the developer toolchain, runtime plugins, the 53-checker compliance suite, domain operations, catalogs, and the separate Phocinae decision line. Each plugin ships with a complete `dsh.bundle` manifest, five-language docs, CI, and npm publishing.
 
-![Workflow diagram for dsh-kit](docs/assets/dsh-kit-flow.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-kit-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-kit-flow-v5-light.svg" width="100%" alt="Structure diagram for dsh-kit: family.txt (117 install specs) and data/repos.json (99 PerryLink repos) feed plugins.txt; install-all.sh and install-all.ps1 read that roster and call dsh plugin add; node scripts/check-parity.mjs gates 9 sibling family tables, the README numbers 88/8/96/99 and both installers, while npm run build:market writes market/index.json in DSH plugin-market format 1">
+</picture>
 
-*Workflow overview: call → plugin → result. The kit is the maintenance surface.*
+*Structure: family.txt + data/repos.json → plugins.txt → install-all → dsh plugin add → gate. Labels inside the diagram are real file names, script names and commands, so one picture serves all five languages.*
 
 
 ## Quick start
 
-![dsh-kit: real terminal run](docs/assets/dsh-kit-demo.gif)
+![dsh-kit: a real terminal run of node scripts/check-parity.mjs --json — install 96, active 88, frozen 8, roster 99, familyRows 99, default scope 35/46/8/3 and full scope 88/99/8/3 (active/roster/frozen/retired)](docs/assets/dsh-kit-demo.gif)
 
-*Animated replay of a real run recorded in this repository.*
+*Animated: node scripts/check-parity.mjs --json re-run on 2026-11-21 — the roster counts the gate derives from plugins.txt (real stdout; the human summary lines are printed before this JSON).*
 
 Pick a profile (e.g. `web`), then install everything:
 
